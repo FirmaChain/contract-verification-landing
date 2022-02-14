@@ -6,6 +6,11 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+p {
+    white-space: pre;
 }
 
 /* code {
@@ -38,15 +43,25 @@ body {
 }
 
 .hoverShow {
-    transition: opacity 0.3s;
+    transition: all 0.8s;
+}
+
+.hoverShowDesc {
+    transition-delay: 0.5s;
+    transition-duration: 1.3s;
+    transition-property: opacity;
+}
+.hoverHiddenDesc {
+    transition-duration: 0.8s;
+    transition-property: opacity;
 }
 
 .horizentalScroll {
-    transition: transform 1s;
+    transition: transform 0.7s ease-in-out;
 }
 
 .buttonSelect {
-    transition: width 1s, color 1s;
+    transition: width 1s, color 1s, padding 1s;
 }
 
 .drawerOpen {
@@ -57,36 +72,61 @@ body {
     transition: all 0.2s;
 }
 
-.allTransition1s {
-    transition: all 0.2s;
+.allTransitionHalfSecond {
+    transition: all 0.5s;
 }
 
-.merryGoRound-15s {
-    animation: rotate 15s linear infinite;
+.merryGoRound-8s {
+    animation: rotate 8s linear infinite;
 }
-.merryGoRound-reverse-15s {
-    animation: reverse-rotate 15s linear infinite;
-}
-
-.merryGoRound-20s {
-    animation: rotate 20s linear infinite;
-}
-.merryGoRound-reverse-20s {
-    animation: reverse-rotate 20s linear infinite;
+.merryGoRound-reverse-8s {
+    animation: reverse-rotate 8s linear infinite;
 }
 
-.merryGoRound-25s {
-    animation: rotate 25s linear infinite;
+.merryGoRound-9s {
+    animation: rotate 9s linear infinite;
 }
-.merryGoRound-reverse-25s {
-    animation: reverse-rotate 25s linear infinite;
+.merryGoRound-reverse-9s {
+    animation: reverse-rotate 9s linear infinite;
+}
+.merryGoRound-11s {
+    animation: rotate 11s linear infinite;
+}
+.merryGoRound-reverse-11s {
+    animation: reverse-rotate 11s linear infinite;
+}
+.merryGoRound-14s {
+    animation: rotate 14s linear infinite;
+}
+.merryGoRound-reverse-14s {
+    animation: reverse-rotate 14s linear infinite;
 }
 
-.merryGoRound-30s {
-    animation: rotate 30s linear infinite;
+.merryGoRound-19s {
+    animation: rotate 19s linear infinite;
 }
-.merryGoRound-reverse-30s {
-    animation: reverse-rotate 30s linear infinite;
+.merryGoRound-reverse-19s {
+    animation: reverse-rotate 19s linear infinite;
+}
+
+.merryGoRound-22s {
+    animation: rotate 22s linear infinite;
+}
+.merryGoRound-reverse-22s {
+    animation: reverse-rotate 22s linear infinite;
+}
+
+.merryGoRound-24s {
+    animation: rotate 24s linear infinite;
+}
+.merryGoRound-reverse-24s {
+    animation: reverse-rotate 24s linear infinite;
+}
+.merryGoRound-29s {
+    animation: rotate 29s linear infinite;
+}
+.merryGoRound-reverse-29s {
+    animation: reverse-rotate 29s linear infinite;
 }
 
 * {

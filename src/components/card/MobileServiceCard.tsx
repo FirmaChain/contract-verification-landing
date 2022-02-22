@@ -1,25 +1,21 @@
-import { IKeyValue } from '../../interface'
-import { Box, Stack, Typography } from '@mui/material'
-import { Lato } from '../../constants/theme'
+import { IKeyValue } from "../../interface";
+import { Box, Stack, Typography } from "@mui/material";
+import { Lato } from "../../constants/theme";
 
 const MobileServiceCard = ({ data }: IKeyValue) => {
     return (
-        <Stack
-            sx={{ position: 'relative' }}
-            alignItems="center"
-            onClick={() => data.goURL && window.open(data.goURL, '_blank')}
-        >
-            <Box sx={{ pb: '20px' }}>
-                <img src={data.imgURL} alt="" style={{ width: '278px' }} />
+        <Stack sx={{ position: "relative" }} alignItems="center" onClick={() => data.goURL && window.open(data.goURL, "_blank")}>
+            <Box sx={{ pb: "20px" }}>
+                <img src={data.imgURL} alt="" style={{ width: "278px" }} draggable={false} />
             </Box>
             <Typography
                 sx={{
                     fontFamily: Lato,
-                    fontSize: '20px',
-                    fontWeight: 'bold',
+                    fontSize: "20px",
+                    fontWeight: "bold",
                     lineHeight: 1.5,
-                    letterSpacing: '-0.3px',
-                    color: '#161718',
+                    letterSpacing: "-0.3px",
+                    color: "#161718",
                 }}
             >
                 {data.title}
@@ -27,16 +23,16 @@ const MobileServiceCard = ({ data }: IKeyValue) => {
             <Typography
                 sx={{
                     fontFamily: Lato,
-                    fontSize: '16px',
+                    fontSize: "16px",
                     lineHeight: 1.88,
-                    letterSpacing: '-0.24px',
-                    color: '#161718',
+                    letterSpacing: "-0.24px",
+                    color: "#161718",
                 }}
             >
                 {data.desc}
             </Typography>
         </Stack>
-    )
-}
+    );
+};
 
-export default MobileServiceCard
+export default MobileServiceCard;

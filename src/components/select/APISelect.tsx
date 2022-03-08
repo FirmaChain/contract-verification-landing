@@ -1,107 +1,92 @@
-import { Stack, Typography } from '@mui/material'
-import { Lato } from '../../constants/theme'
-import { IKeyValue } from '../../interface'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import { useState } from 'react'
-import { ListSelectBox } from '../../styles'
+import { Stack, Typography } from "@mui/material";
+import { Lato } from "../../constants/theme";
+import { IKeyValue } from "../../interface";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useState } from "react";
+import { ListSelectBox } from "../../styles";
 
-const Select = ({
-    idx,
-    setIdx,
-    sx,
-}: {
-    idx: number
-    setIdx: any
-    sx?: IKeyValue
-}) => {
-    const [open, setOpen] = useState(false)
+interface ISelectProps {
+    idx: number;
+    setIdx: any;
+    sx?: IKeyValue;
+    disabled?: boolean;
+}
 
-    const LIST = [
-        'Create contract file',
-        'Add contract log',
-        'Get contract file',
-        'Get contract log',
-        'Use contract utils',
-    ]
+const Select = ({ idx, setIdx, sx, disabled = false }: ISelectProps) => {
+    const [open, setOpen] = useState(false);
+
+    const LIST = disabled ? ["Coming Soon"] : ["Create contract file", "Add contract log", "Get contract file", "Get contract log", "Use contract utils"];
 
     const onChangeIdx = (idx: number) => {
-        setIdx(idx)
-        setOpen(false)
-    }
+        setIdx(idx);
+        setOpen(false);
+    };
 
     return (
-        <Stack
-            tabIndex={1}
-            onBlur={() => setOpen(false)}
-            sx={{ width: 'calc(100%)', position: 'relative', zIndex: 5 }}
-        >
+        <Stack tabIndex={1} onBlur={() => setOpen(false)} sx={{ width: "calc(100%)", position: "relative", zIndex: 5 }}>
             <Stack
-                onClick={() => setOpen(!open)}
+                onClick={disabled ? () => null : () => setOpen(!open)}
                 direction="row"
                 sx={{
-                    width: '100%',
-                    height: '48px',
-                    border: '1px solid #546079',
-                    backgroundColor: '#333b4c',
-                    borderRadius: '4px',
+                    width: "100%",
+                    height: "48px",
+                    border: "1px solid #546079",
+                    backgroundColor: "#333b4c",
+                    borderRadius: "4px",
 
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
+                    alignItems: "center",
+                    justifyContent: "space-between",
 
-                    padding: '14px 16px',
-                    boxSizing: 'border-box',
+                    padding: "14px 16px",
+                    boxSizing: "border-box",
 
                     // String
                     fontFamily: Lato,
-                    fontSize: '16px',
-                    color: '#fff',
+                    fontSize: "16px",
+                    color: "#fff",
                     lineHeight: 1.13,
-                    letterSpacing: '-0.24px',
+                    letterSpacing: "-0.24px",
 
                     ...sx,
                 }}
             >
-                <Typography>{LIST[idx]}</Typography>
+                <Typography sx={{ opacity: disabled ? 0.5 : 1 }}>{LIST[idx]}</Typography>
                 <KeyboardArrowDownIcon
                     sx={{
+                        opacity: disabled ? 0 : 1,
                         transform: `rotate(${open ? 180 : 0}deg)`,
-                        transition: 'all 0.3s',
+                        transition: "all 0.3s",
                     }}
                 />
             </Stack>
             <div
                 className="drawerOpen"
                 style={{
-                    width: 'calc(100%)',
-                    position: 'absolute',
-                    top: '48px',
+                    width: "calc(100%)",
+                    position: "absolute",
+                    top: "48px",
                     height: open ? 48 * LIST.length + 20 : 0,
-                    overflow: 'hidden',
+                    overflow: "hidden",
                 }}
             >
                 <Stack
                     sx={{
                         height: `${LIST.length * 48 + 8}px`,
 
-                        border: '1px solid #546079',
-                        backgroundColor: '#333b4c',
-                        mt: '10px',
-                        padding: '4px 0',
-                        borderRadius: '4px',
+                        border: "1px solid #546079",
+                        backgroundColor: "#333b4c",
+                        mt: "10px",
+                        padding: "4px 0",
+                        borderRadius: "4px",
                     }}
                 >
                     {LIST.map((one: string, thisIdx: number) => (
-                        <ListSelectBox
-                            title={one}
-                            nowIdx={idx}
-                            idx={thisIdx}
-                            onClick={() => onChangeIdx(thisIdx)}
-                        />
+                        <ListSelectBox key={thisIdx} title={one} nowIdx={idx} idx={thisIdx} onClick={() => onChangeIdx(thisIdx)} />
                     ))}
                 </Stack>
             </div>
         </Stack>
-    )
-}
+    );
+};
 
-export default Select
+export default Select;

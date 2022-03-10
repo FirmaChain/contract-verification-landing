@@ -1,5 +1,5 @@
 {
-    "name": "verify-landing",
+    "name": "contract-verification-landing",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -12,6 +12,7 @@
         "@types/react": "^18.0.25",
         "@types/react-dom": "^18.0.9",
         "react": "^18.2.0",
+        "react-app-env": "^1.2.3",
         "react-device-detect": "^2.2.2",
         "react-dom": "^18.2.0",
         "react-scripts": "5.0.1",
@@ -20,8 +21,13 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "GENERATE_SOURCEMAP=false react-scripts build",
+        "start": "react-app-env --env-file=.env.testnet start",
+        "testnet": "GENERATE_SOURCEMAP=false react-app-env --env-file=.env.testnet build",
+        "mainnet": "GENERATE_SOURCEMAP=false react-app-env --env-file=.env.mainnet build",
+        "deploy-testnet": "aws s3 sync ./build s3://deploy-ecosystem/testnet/verify-landing --profile=firmachain-deploy --delete",
+        "invalidate-testnet": "aws cloudfront create-invalidation --profile=firmachain-deploy --distribution-id E1XREEK59YPPPJ --paths '/*'",
+        "deploy-mainnet": "aws s3 sync ./build s3://deploy-ecosystem/mainnet/verify-landing --profile=firmachain-deploy --delete",
+        "invalidate-mainnet": "aws cloudfront create-invalidation --profile=firmachain-deploy --distribution-id E2XYJ9YEADEVN --paths '/*'",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },

@@ -15,23 +15,54 @@ import Drawer from '@mui/material/Drawer'
 import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
 import CallMadeIcon from '@mui/icons-material/CallMade'
+import useGlobalState from '../../hooks/useGlobalState'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
+    // const [headerState, setHeaderState] = useState(0)
+
+    const { headerState } = useGlobalState()
+
+    const HEADER_BG_SX = [
+        { backgroundColor: 'transparent', backdropFilter: 'blur(0px)' },
+        {
+            backgroundColor: 'rgba(255, 255, 255, 0.16)',
+            backdropFilter: 'blur(30px)',
+            boxShadow: '0 3px 6px 0 rgba(0, 0, 0, 0.16)',
+        },
+        {
+            backgroundColor: '#FFF',
+            backdropFilter: 'un',
+            boxShadow: '0 3px 6px 0 rgba(0, 0, 0, 0.08)',
+        },
+    ]
+
+    const HEADER_TEXT_SX = [
+        { color: '#FFF' },
+        { color: '#FFF' },
+        { color: '#343539' },
+    ]
+
+    const HEADER_IMAGE_URL = [
+        PC_IMG_HEADER_LOGO,
+        PC_IMG_HEADER_LOGO,
+        M_IMG_HEADER_LOGO_BK,
+    ]
 
     return (
         <>
             <BrowserView>
                 <Box
+                    className="allTransition1s"
                     sx={{
                         position: 'fixed',
-                        backgroundColor: 'rgba(143, 143, 143, 0.3)',
-                        backdropFilter: 'blur(10px)',
+
                         width: '100%',
                         display: 'flex',
                         justifyContent: 'center',
                         height: '72px',
                         zIndex: 100,
+                        ...HEADER_BG_SX[headerState],
                     }}
                 >
                     <Stack
@@ -45,12 +76,25 @@ const Header = () => {
                         }}
                     >
                         <Box sx={{ cursor: 'pointer' }}>
-                            <img src={PC_IMG_HEADER_LOGO} alt="" />
+                            <img
+                                src={HEADER_IMAGE_URL[headerState]}
+                                alt=""
+                                style={{ width: '171px' }}
+                            />
                         </Box>
                         <Stack direction="row" gap="90px">
-                            <GotoButton menu={'verify'} />
-                            <GotoButton menu={'api docs'} />
-                            <GotoButton menu={'ecosystem'} />
+                            <GotoButton
+                                menu={'verify'}
+                                sx={HEADER_TEXT_SX[headerState]}
+                            />
+                            <GotoButton
+                                menu={'api docs'}
+                                sx={HEADER_TEXT_SX[headerState]}
+                            />
+                            <GotoButton
+                                menu={'ecosystem'}
+                                sx={HEADER_TEXT_SX[headerState]}
+                            />
                         </Stack>
 
                         <NetworkIndicator network={'Testnet'} />
@@ -59,12 +103,9 @@ const Header = () => {
             </BrowserView>
             <MobileView>
                 <Box
-                    className="allTransition"
+                    className="allTransition1s"
                     sx={{
                         position: 'fixed',
-                        backgroundColor: open
-                            ? '#fff'
-                            : 'rgba(143, 143, 143, 0.3)',
 
                         width: '100%',
                         borderBottom: open ? '#fff' : 'unset',
@@ -72,6 +113,7 @@ const Header = () => {
                         justifyContent: 'center',
                         height: '58px',
                         zIndex: 100,
+                        ...HEADER_BG_SX[headerState === 1 ? 2 : headerState],
                     }}
                 >
                     <Stack
@@ -83,7 +125,7 @@ const Header = () => {
                         <Box>
                             <img
                                 src={
-                                    open
+                                    open || headerState > 0
                                         ? M_IMG_HEADER_LOGO_BK
                                         : M_IMG_HEADER_LOGO
                                 }
@@ -99,7 +141,11 @@ const Header = () => {
                                 />
                             ) : (
                                 <MenuIcon
-                                    sx={{ fontSize: '32px', color: '#fff' }}
+                                    sx={{
+                                        fontSize: '32px',
+                                        color:
+                                            headerState > 0 ? '#000' : '#fff',
+                                    }}
                                     onClick={() => setOpen(true)}
                                 />
                             )}
@@ -121,7 +167,6 @@ const Header = () => {
                         },
                         '& .MuiPaper-root': {
                             padding: '0 16px 30px 16px',
-                            // boxSizing: 'border-box',
                         },
                     }}
                 >

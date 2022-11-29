@@ -151,7 +151,7 @@ const VerifyAPI = () => {
                                     <img
                                         src={M_IMG_VERIFY_API}
                                         alt=""
-                                        style={{ width: '343px' }}
+                                        style={{ width: '100%' }}
                                     />
                                 </Box>
                             </Stack>

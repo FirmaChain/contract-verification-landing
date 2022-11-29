@@ -16,6 +16,9 @@ import {
     isBrowser,
     isMobile,
 } from 'react-device-detect'
+import { useIntersection } from 'react-use'
+import { useEffect, useRef } from 'react'
+import useGlobalState from '../hooks/useGlobalState'
 
 const BACKGROUND = {
     width: '100%',
@@ -27,236 +30,277 @@ const BACKGROUND = {
     backgroundSize: 'cover',
     boxSizing: 'border-box',
     padding: '0 30px',
-    // justifyContent: 'center',
 }
 
 const Welcome = () => {
+    const { setHeaderState } = useGlobalState()
+
+    const interTopRef = useRef(null)
+    const interBottomRef = useRef(null)
+
+    const topIntersection = useIntersection(interTopRef, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1,
+    })
+
+    const bottomIntersection = useIntersection(interBottomRef, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1,
+    })
+
+    useEffect(() => {
+        if (topIntersection && bottomIntersection) {
+            topIntersection.isIntersecting &&
+                bottomIntersection.isIntersecting &&
+                setHeaderState(0)
+
+            !topIntersection.isIntersecting &&
+                bottomIntersection.isIntersecting &&
+                setHeaderState(1)
+
+            !topIntersection.isIntersecting &&
+                !bottomIntersection.isIntersecting &&
+                setHeaderState(2)
+        }
+    }, [topIntersection, bottomIntersection])
+
     return (
-        <Stack direction="row" sx={{ ...BACKGROUND }}>
-            <BrowserView style={{ width: '100%' }}>
-                <Stack
-                    sx={{ width: '100%', alignItems: 'center', pt: '100px' }}
-                >
+        <>
+            <Box ref={interTopRef} />
+            <Stack direction="row" sx={{ ...BACKGROUND }}>
+                <BrowserView style={{ width: '100%' }}>
                     <Stack
-                        direction="row"
-                        justifyContent="space-between"
                         sx={{
                             width: '100%',
-                            maxWidth: '1200px',
+                            alignItems: 'center',
+                            pt: '100px',
                         }}
                     >
                         <Stack
-                            justifyContent="center"
-                            gap="40px"
-                            sx={{ maxWidth: '1200px' }}
+                            direction="row"
+                            justifyContent="space-between"
+                            sx={{
+                                width: '100%',
+                                maxWidth: '1200px',
+                            }}
                         >
-                            <Typography
-                                sx={{
-                                    width: '566px',
-                                    fontFamily: Metropolis,
-                                    fontSize: '78px',
-                                    fontWeight: 700,
-                                    lineHeight: '1.03',
-                                    letterSpacing: '-1.85px',
-                                    color: '#fff',
-                                }}
+                            <Stack
+                                justifyContent="center"
+                                gap="40px"
+                                sx={{ maxWidth: '1200px' }}
                             >
-                                Trust,
-                                <br />
-                                verify
-                                <br />
-                                more than that.
-                            </Typography>
-
-                            <Typography
-                                sx={{
-                                    width: '371px',
-                                    fontFamily: Lato,
-                                    fontSize: '20px',
-                                    lineHeight: '1.4',
-                                    letterSpacing: '-0.3px',
-                                    color: '#fff',
-                                }}
-                            >
-                                FIRMA VERIFY supports verification of all data
-                                recorded on FIRMACHAIN based on FIRMACHAIN’s
-                                high reliability.
-                            </Typography>
-                        </Stack>
-
-                        <Stack justifyContent="flex-end">
-                            <Box
-                                sx={{
-                                    position: 'relative',
-                                    width: '565px',
-                                    height: '565px',
-                                }}
-                            >
-                                <img src={IMG_WELCOME_BIG_CIRCLE} alt="" />
-
-                                <Box
+                                <Typography
                                     sx={{
-                                        position: 'absolute',
-
-                                        top: '50%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '440px',
-                                        height: '440px',
+                                        width: '566px',
+                                        fontFamily: Metropolis,
+                                        fontSize: '78px',
+                                        fontWeight: 700,
+                                        lineHeight: '1.03',
+                                        letterSpacing: '-1.85px',
+                                        color: '#fff',
                                     }}
                                 >
-                                    <Stack
-                                        className="movingImg"
+                                    Trust,
+                                    <br />
+                                    verify
+                                    <br />
+                                    more than that.
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        width: '371px',
+                                        fontFamily: Lato,
+                                        fontSize: '20px',
+                                        lineHeight: '1.4',
+                                        letterSpacing: '-0.3px',
+                                        color: '#fff',
+                                    }}
+                                >
+                                    FIRMA VERIFY supports verification of all
+                                    data recorded on FIRMACHAIN based on
+                                    FIRMACHAIN’s high reliability.
+                                </Typography>
+                            </Stack>
+
+                            <Stack justifyContent="flex-end">
+                                <Box
+                                    sx={{
+                                        position: 'relative',
+                                        width: '565px',
+                                        height: '565px',
+                                    }}
+                                >
+                                    <img src={IMG_WELCOME_BIG_CIRCLE} alt="" />
+
+                                    <Box
                                         sx={{
-                                            width: '100%',
-                                            height: '100%',
+                                            position: 'absolute',
+
+                                            top: '50%',
+                                            left: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            width: '440px',
+                                            height: '440px',
                                         }}
                                     >
-                                        <div>
+                                        <Stack
+                                            className="movingImg"
+                                            sx={{
+                                                width: '100%',
+                                                height: '100%',
+                                            }}
+                                        >
+                                            <div>
+                                                <img
+                                                    src={IC_WELCOME_CONTRACT}
+                                                    alt=""
+                                                    className="rotate_reverse_5s"
+                                                />
+                                            </div>
+                                        </Stack>
+                                    </Box>
+
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+
+                                            top: '50%',
+                                            left: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            width: '300px',
+                                            height: '300px',
+                                        }}
+                                    >
+                                        <Stack
+                                            className="movingImg"
+                                            sx={{
+                                                width: '100%',
+                                                height: '100%',
+                                                alignItems: 'flex-end',
+                                            }}
+                                        >
                                             <img
-                                                src={IC_WELCOME_CONTRACT}
+                                                src={IC_WELCOME_FOLDER}
                                                 alt=""
                                                 className="rotate_reverse_5s"
                                             />
-                                        </div>
-                                    </Stack>
-                                </Box>
+                                        </Stack>
+                                    </Box>
 
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-
-                                        top: '50%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '300px',
-                                        height: '300px',
-                                    }}
-                                >
-                                    <Stack
-                                        className="movingImg"
+                                    <Box
                                         sx={{
-                                            width: '100%',
-                                            height: '100%',
-                                            alignItems: 'flex-end',
+                                            position: 'absolute',
+
+                                            top: '50%',
+                                            left: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            width: '480px',
+                                            height: '480px',
                                         }}
                                     >
-                                        <img
-                                            src={IC_WELCOME_FOLDER}
-                                            alt=""
-                                            className="rotate_reverse_5s"
-                                        />
-                                    </Stack>
-                                </Box>
-
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-
-                                        top: '50%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '480px',
-                                        height: '480px',
-                                    }}
-                                >
-                                    <Stack
-                                        className="movingImg"
+                                        <Stack
+                                            className="movingImg"
+                                            sx={{
+                                                width: '100%',
+                                                height: '100%',
+                                                justifyContent: 'flex-end',
+                                            }}
+                                        >
+                                            <div>
+                                                <img
+                                                    src={IC_WELCOME_SHOPPING}
+                                                    alt=""
+                                                    className="rotate_reverse_5s"
+                                                />
+                                            </div>
+                                        </Stack>
+                                    </Box>
+                                    <Box
                                         sx={{
-                                            width: '100%',
-                                            height: '100%',
-                                            justifyContent: 'flex-end',
+                                            position: 'absolute',
+
+                                            top: '50%',
+                                            left: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            width: '500px',
+                                            height: '500px',
                                         }}
                                     >
-                                        <div>
-                                            <img
-                                                src={IC_WELCOME_SHOPPING}
-                                                alt=""
-                                                className="rotate_reverse_5s"
-                                            />
-                                        </div>
-                                    </Stack>
+                                        <Stack
+                                            className="movingImg"
+                                            sx={{
+                                                width: '100%',
+                                                height: '100%',
+                                                justifyContent: 'flex-end',
+                                                alignItems: 'flex-end',
+                                            }}
+                                        >
+                                            <div>
+                                                <img
+                                                    src={IC_WELCOME_BROWSER}
+                                                    alt=""
+                                                    className="rotate_reverse_5s"
+                                                />
+                                            </div>
+                                        </Stack>
+                                    </Box>
                                 </Box>
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-
-                                        top: '50%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '500px',
-                                        height: '500px',
-                                    }}
-                                >
-                                    <Stack
-                                        className="movingImg"
-                                        sx={{
-                                            width: '100%',
-                                            height: '100%',
-                                            justifyContent: 'flex-end',
-                                            alignItems: 'flex-end',
-                                        }}
-                                    >
-                                        <div>
-                                            <img
-                                                src={IC_WELCOME_BROWSER}
-                                                alt=""
-                                                className="rotate_reverse_5s"
-                                            />
-                                        </div>
-                                    </Stack>
-                                </Box>
-                            </Box>
+                            </Stack>
                         </Stack>
                     </Stack>
-                </Stack>
-            </BrowserView>
-            <MobileView style={{ width: '100%' }}>
-                <Stack
-                    direction="column"
-                    gap="20px"
-                    alignItems="center"
-                    pb="44px"
-                >
-                    <Typography
-                        sx={{
-                            fontFamily: Metropolis,
-                            fontSize: '40px',
-                            fontWeight: 'bold',
-                            lineHeight: 1.1,
-                            letterSpacing: '-1px',
-                            color: '#fff',
-                            textAlign: 'center',
-                            pt: '98px',
-                        }}
+                </BrowserView>
+                <MobileView style={{ width: '100%' }}>
+                    <Stack
+                        direction="column"
+                        gap="20px"
+                        alignItems="center"
+                        pb="44px"
                     >
-                        Trust, verify
-                        <br /> more than that.
-                    </Typography>
-                    <Typography
-                        sx={{
-                            width: '278px',
-                            fontFamily: Lato,
-                            fontSize: '16px',
-                            lineHeight: 1.25,
-                            letterSpacing: '-0.24px',
-                            textAlign: 'center',
-                            color: GRAYef,
-                        }}
-                    >
-                        FIRMA VERIFY supports verification of all data recorded
-                        on FIRMACHAIN based on FIRMACHAIN’s high reliability.
-                    </Typography>
-                </Stack>
-                <Stack alignItems="center">
-                    <img
-                        src={M_IMG_MAIN_VISUAL}
-                        alt=""
-                        style={{ width: '283px' }}
-                    />
-                </Stack>
-            </MobileView>
-        </Stack>
+                        <Typography
+                            sx={{
+                                fontFamily: Metropolis,
+                                fontSize: '40px',
+                                fontWeight: 'bold',
+                                lineHeight: 1.1,
+                                letterSpacing: '-1px',
+                                color: '#fff',
+                                textAlign: 'center',
+                                pt: '98px',
+                            }}
+                        >
+                            Trust, verify
+                            <br /> more than that.
+                        </Typography>
+                        <Typography
+                            sx={{
+                                width: '278px',
+                                fontFamily: Lato,
+                                fontSize: '16px',
+                                lineHeight: 1.25,
+                                letterSpacing: '-0.24px',
+                                textAlign: 'center',
+                                color: GRAYef,
+                            }}
+                        >
+                            FIRMA VERIFY supports verification of all data
+                            recorded on FIRMACHAIN based on FIRMACHAIN’s high
+                            reliability.
+                        </Typography>
+                    </Stack>
+                    <Stack alignItems="center">
+                        <img
+                            src={M_IMG_MAIN_VISUAL}
+                            alt=""
+                            style={{ width: '283px' }}
+                        />
+                    </Stack>
+                </MobileView>
+            </Stack>
+            <Box ref={interBottomRef} />
+        </>
     )
 }
 

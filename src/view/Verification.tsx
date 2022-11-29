@@ -100,7 +100,7 @@ const Verification = () => {
                         <img
                             src={M_IMG_VERIFICATION}
                             alt=""
-                            style={{ maxWidth: '343px' }}
+                            style={{ width: '100%' }}
                         />
                     </Box>
                 </Stack>

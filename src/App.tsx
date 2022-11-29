@@ -9,10 +9,11 @@ import Services from './view/Services'
 import Contact from './view/Contact'
 import Header from './components/header'
 import Footer from './components/footer'
+import { GlobalStateProvider } from './contexts/GlobalStateContext'
 
 const App = () => {
     return (
-        <>
+        <GlobalStateProvider>
             <Header />
             <Container>
                 <Welcome />
@@ -24,7 +25,7 @@ const App = () => {
                 <Contact />
                 <Footer />
             </Container>
-        </>
+        </GlobalStateProvider>
     )
 }
 

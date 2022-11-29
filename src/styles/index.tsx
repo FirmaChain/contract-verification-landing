@@ -287,5 +287,5 @@ export const ContentOuterBox = styled(Stack)(({ theme }) => ({
     flexDirection: 'column',
     alignItems: 'center',
     boxSizing: 'border-box',
-    padding: '0 30px',
+    padding: isBrowser ? '0 30px' : '0 16px',
 }))

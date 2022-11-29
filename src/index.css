@@ -55,3 +55,7 @@ body {
 .allTransition {
     transition: all 0.2s;
 }
+
+.allTransition1s {
+    transition: all 0.2s;
+}

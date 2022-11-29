@@ -182,7 +182,7 @@ const About = () => {
                                 <img
                                     src={M_IMG_ABOUT_1}
                                     alt=""
-                                    style={{ maxWidth: '343px' }}
+                                    style={{ width: '100%' }}
                                 />
                             </Box>
                         </Stack>
@@ -224,7 +224,7 @@ const About = () => {
                                 <img
                                     src={M_IMG_ABOUT_2}
                                     alt=""
-                                    style={{ maxWidth: '343px' }}
+                                    style={{ width: '100%' }}
                                 />
                             </Box>
                         </Stack>

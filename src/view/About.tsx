@@ -1,12 +1,11 @@
 import { Box, Stack } from '@mui/material'
 import { IMG_ABOUT_1, IMG_ABOUT_2 } from '../constants/images'
 import {
-    RedirectButton,
+    OutlinedBlueButton,
     SectionDesc,
     SectionHead,
     SectionTitle,
 } from '../styles'
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 
 const About = () => {
     return (
@@ -20,13 +19,17 @@ const About = () => {
                             width: '100%',
                             maxWidth: '1200px',
                             justifyContent: 'space-between',
+                            position: 'relative',
                         }}
                     >
                         <Stack>
-                            <SectionTitle>About</SectionTitle>
+                            <SectionTitle sx={{ color: '#0875f5' }}>
+                                About
+                            </SectionTitle>
                             <SectionHead
                                 sx={{
-                                    width: '443px',
+                                    color: '#161718',
+                                    width: '479px',
                                     pb: '40px',
                                 }}
                             >
@@ -36,6 +39,7 @@ const About = () => {
                                 sx={{
                                     width: '378px',
                                     pb: '40px',
+                                    color: '#4a4d51',
                                 }}
                             >
                                 Due to the nature of the blockchain-based data,
@@ -44,16 +48,9 @@ const About = () => {
                                 verification services.
                             </SectionDesc>
 
-                            <Box>
-                                <RedirectButton>
-                                    Verify service{' '}
-                                    <KeyboardArrowRightIcon
-                                        sx={{ fontSize: '18px' }}
-                                    />
-                                </RedirectButton>
-                            </Box>
+                            <OutlinedBlueButton title="Verify service" />
                         </Stack>
-                        <Box>
+                        <Box sx={{ position: 'absolute', right: 0 }}>
                             <img src={IMG_ABOUT_1} alt="" />
                         </Box>
                     </Stack>
@@ -80,7 +77,9 @@ const About = () => {
                             />
                         </Box>
                         <Stack sx={{ alignItems: 'flex-end' }}>
-                            <SectionTitle>About</SectionTitle>
+                            <SectionTitle sx={{ color: '#0875f5' }}>
+                                About
+                            </SectionTitle>
                             <SectionHead
                                 sx={{
                                     width: '541px',
@@ -99,6 +98,7 @@ const About = () => {
                                     width: '485px',
                                     pb: '40px',
                                     textAlign: 'right',
+                                    color: '#4a4d51',
                                 }}
                             >
                                 It is an open API provided by the Firma chain,
@@ -109,14 +109,7 @@ const About = () => {
                                 inquiring.
                             </SectionDesc>
 
-                            <Box>
-                                <RedirectButton>
-                                    API Docs{' '}
-                                    <KeyboardArrowRightIcon
-                                        sx={{ fontSize: '18px' }}
-                                    />
-                                </RedirectButton>
-                            </Box>
+                            <OutlinedBlueButton title="API Docs" />
                         </Stack>
                     </Stack>
                 </Stack>

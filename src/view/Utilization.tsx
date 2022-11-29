@@ -22,16 +22,21 @@ const Utilization = () => {
                     maxWidth: '1200px',
                 }}
             >
-                <SectionTitle sx={{ pb: '40px' }}>
+                <SectionTitle sx={{ color: '#0875f5', pb: '20px' }}>
                     Utilization field
                 </SectionTitle>
                 <SectionHead
-                    sx={{ width: '650px', textAlign: 'center', pb: '40px' }}
+                    sx={{ width: '700px', textAlign: 'center', pb: '40px' }}
                 >
                     FIRMA VERIFY can be used in various fields.
                 </SectionHead>
                 <SectionDesc
-                    sx={{ width: '530px', textAlign: 'center', pb: '100px' }}
+                    sx={{
+                        width: '530px',
+                        color: '#4a4d51',
+                        textAlign: 'center',
+                        pb: '100px',
+                    }}
                 >
                     It can be introduced into various fields such as contracts,
                     transactions, and records made online or offline.

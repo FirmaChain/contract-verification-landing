@@ -12,8 +12,9 @@ import { Lato, Metropolis } from '../constants/theme'
 const BACKGROUND = {
     width: '100%',
     backgroundImage: `url(${IMG_WELCOME_BACKGROUND})`,
-    backgroundRepeat: 'none',
+    backgroundRepeat: 'no-repeat',
     height: '720px',
+    backgroundSize: 'cover',
     justifyContent: 'center',
 }
 
@@ -32,10 +33,10 @@ const Welcome = () => {
                 >
                     <Typography
                         sx={{
-                            width: '537px',
+                            width: '566px',
                             fontFamily: Metropolis,
-                            fontSize: '74px',
-                            fontWeight: 900,
+                            fontSize: '78px',
+                            fontWeight: 700,
                             lineHeight: '1.03',
                             letterSpacing: '-1.85px',
                             color: '#fff',
@@ -53,8 +54,8 @@ const Welcome = () => {
                             width: '371px',
                             fontFamily: Lato,
                             fontSize: '20px',
-                            lineHeight: '1.38',
-                            letterSpacing: '-0.24px',
+                            lineHeight: '1.4',
+                            letterSpacing: '-0.3px',
                             color: '#fff',
                         }}
                     >
@@ -71,45 +72,49 @@ const Welcome = () => {
                         }}
                     >
                         <img src={IMG_WELCOME_BIG_CIRCLE} alt="" />
-                        <img
-                            src={IC_WELCOME_CONTRACT}
-                            alt=""
-                            style={{
+
+                        <Box
+                            className="movingImg"
+                            sx={{
                                 position: 'absolute',
                                 top: '43px',
                                 left: '73px',
                             }}
-                        />
+                        >
+                            <img src={IC_WELCOME_CONTRACT} alt="" />
+                        </Box>
 
-                        <img
-                            src={IC_WELCOME_FOLDER}
-                            alt=""
-                            style={{
+                        <Box
+                            className="movingImg"
+                            sx={{
                                 position: 'absolute',
                                 top: '70px',
                                 left: '356px',
                             }}
-                        />
+                        >
+                            <img src={IC_WELCOME_FOLDER} alt="" />
+                        </Box>
 
-                        <img
-                            src={IC_WELCOME_SHOPPING}
-                            alt=""
-                            style={{
+                        <Box
+                            className="movingImg"
+                            sx={{
                                 position: 'absolute',
                                 top: '355px',
                                 left: '0px',
                             }}
-                        />
-
-                        <img
-                            src={IC_WELCOME_BROWSER}
-                            alt=""
-                            style={{
+                        >
+                            <img src={IC_WELCOME_SHOPPING} alt="" />
+                        </Box>
+                        <Box
+                            className="movingImg"
+                            sx={{
                                 position: 'absolute',
                                 top: '360px',
                                 left: '430px',
                             }}
-                        />
+                        >
+                            <img src={IC_WELCOME_BROWSER} alt="" />
+                        </Box>
                     </Box>
                 </Stack>
             </Stack>

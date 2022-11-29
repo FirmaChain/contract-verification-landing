@@ -15,7 +15,7 @@ const Services = () => {
                 sx={{
                     maxWidth: '1200px',
                     width: '100%',
-                    pt: '130px',
+                    pt: '150px',
                     pb: '160px',
                     alignItems: 'center',
                 }}
@@ -33,7 +33,7 @@ const Services = () => {
                         <SectionTitle sx={{ pb: '20px', color: '#0875f5' }}>
                             Verify service
                         </SectionTitle>
-                        <SectionHead sx={{ width: '630px' }}>
+                        <SectionHead sx={{ width: '642px' }}>
                             Meet the various services of FIRMA VERIFY.
                         </SectionHead>
                     </Stack>

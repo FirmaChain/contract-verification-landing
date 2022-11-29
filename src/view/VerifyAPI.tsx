@@ -9,67 +9,75 @@ import {
     SectionHead,
     SectionTitle,
     RedirectButton,
+    OutlinedWhiteButton,
 } from '../styles'
 
 const VerifyAPI = () => {
     return (
         <Stack
-            sx={{
-                width: '100%',
-                backgroundColor: '#051527',
-                alignItems: 'center',
-            }}
+            sx={{ width: '100%', padding: '0 50px', boxSizing: 'border-box' }}
         >
             <Stack
-                direction="column"
                 sx={{
-                    pt: '130px',
-                    pb: '150px',
+                    borderRadius: '24px',
+                    backgroundColor: '#051527',
                     alignItems: 'center',
-                    maxWidth: '1200px',
                 }}
             >
-                <SectionTitle sx={{ pb: '40px', color: '#e1e7f3' }}>
-                    verify api
-                </SectionTitle>
-                <Box sx={{ pb: '40px' }}>
-                    <SectionHead sx={{ textAlign: 'center', color: '#fff' }}>
-                        Effective and convenient
-                    </SectionHead>
-                    <SectionHead
+                <Stack
+                    direction="column"
+                    sx={{
+                        pt: '130px',
+                        pb: '150px',
+                        alignItems: 'center',
+                        maxWidth: '1200px',
+                    }}
+                >
+                    <SectionTitle sx={{ pb: '40px', color: '#e1e7f3' }}>
+                        verify api
+                    </SectionTitle>
+                    <Box sx={{ pb: '40px' }}>
+                        <SectionHead
+                            sx={{
+                                textAlign: 'center',
+                                color: '#fff',
+                                letterSpacing: '-1.45px !important',
+                            }}
+                        >
+                            Effective and convenient
+                        </SectionHead>
+                        <SectionHead
+                            sx={{
+                                textAlign: 'center',
+                                color: 'transparent',
+                                background:
+                                    'linear-gradient(to left, #fff 0%, #0089ff 100%)',
+                                '-webkit-background-clip': 'text',
+                            }}
+                        >
+                            OPEN API.
+                        </SectionHead>
+                    </Box>
+                    <SectionDesc
                         sx={{
+                            width: '714px',
                             textAlign: 'center',
-                            color: 'transparent',
-                            background:
-                                'linear-gradient(to left, #c1e2ff, #0089ff)',
-                            '-webkit-background-clip': 'text',
+                            pb: '40px',
+                            color: '#d0d5e0',
                         }}
                     >
-                        OPEN API.
-                    </SectionHead>
-                </Box>
-                <SectionDesc
-                    sx={{
-                        width: '714px',
-                        textAlign: 'center',
-                        pb: '40px',
-                        color: '#fff',
-                    }}
-                >
-                    It supports various functions such as contract recording &
-                    inquiry, extraction of HASH values, and status recording,
-                    and provides a guide for easy application.
-                </SectionDesc>
-                <RedirectButton
-                    sx={{
-                        border: '1px solid white',
-                        color: '#fff',
-                        mb: '100px',
-                    }}
-                >
-                    API Docs
-                </RedirectButton>
-                <APICodeBox />
+                        It supports various functions such as contract recording
+                        & inquiry, extraction of HASH values, and status
+                        recording, and provides a guide for easy application.
+                    </SectionDesc>
+
+                    <OutlinedWhiteButton
+                        title="API Docs"
+                        sx={{ mb: '100px' }}
+                    />
+
+                    <APICodeBox />
+                </Stack>
             </Stack>
         </Stack>
     )

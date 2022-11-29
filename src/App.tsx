@@ -8,6 +8,7 @@ import VerifyAPI from './view/VerifyAPI'
 import Services from './view/Services'
 import Contact from './view/Contact'
 import Header from './components/header'
+import Footer from './components/footer'
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
                 <VerifyAPI />
                 <Services />
                 <Contact />
+                <Footer />
             </Container>
         </>
     )

@@ -1,13 +1,6 @@
 import { Stack, Typography } from '@mui/material'
-import ServiceList from '../components/card/ServicesList'
-import { IMG_VERIFICATION } from '../constants/images'
 import { Lato, Metropolis } from '../constants/theme'
-import {
-    RedirectButton,
-    SectionDesc,
-    SectionHead,
-    SectionTitle,
-} from '../styles'
+import { ContainedBlueButton } from '../styles'
 
 const Contact = () => {
     return (
@@ -41,7 +34,10 @@ const Contact = () => {
                             fontSize: '44px',
                             fontFamily: Metropolis,
                             color: '#161718',
-                            fontWeight: 900,
+                            fontWeight: 'bold',
+                            lineHeight: 1.27,
+                            letterSpacing: '-1.1px',
+                            pb: '24px',
                         }}
                     >
                         Get in Touch!
@@ -59,12 +55,10 @@ const Contact = () => {
                         If you have difficulty applying the API, FIRMACHAIN will
                         support you directly.
                     </Typography>
-                    <RedirectButton
-                        variant="contained"
-                        sx={{ backgroundColor: '#0875f5', color: '#fff' }}
-                    >
-                        Contact us
-                    </RedirectButton>
+                    <ContainedBlueButton
+                        title="Contact us"
+                        onClick={() => {}}
+                    />
                 </Stack>
             </Stack>
         </Stack>

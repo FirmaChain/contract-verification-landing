@@ -1,60 +1,66 @@
 /* Lato */
 @font-face {
     font-family: 'Lato';
-    font-weight: '100';
+    font-weight: 100;
     src: url(./constants/assets/Lato/Lato-Thin.ttf);
 }
 @font-face {
     font-family: 'Lato';
-    font-weight: '300';
+    font-weight: 300;
     src: url(./constants/assets/Lato/Lato-Light.ttf);
 }
 
 @font-face {
     font-family: 'Lato';
-    font-weight: '400';
+    font-weight: 400;
     src: url(./constants/assets/Lato/Lato-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Lato';
-    font-weight: '700';
+    font-weight: 700;
     src: url(./constants/assets/Lato/Lato-Bold.ttf);
 }
 
 @font-face {
     font-family: 'Lato';
-    font-weight: '900';
+    font-weight: 900;
     src: url(./constants/assets/Lato/Lato-Black.ttf);
 }
 
 /* Metropolis */
 @font-face {
     font-family: 'Metropolis';
-    font-weight: '100';
+    font-weight: 100;
     src: url(./constants/assets/Metroplis/Metropolis-Thin.otf);
 }
 
 @font-face {
     font-family: 'Metropolis';
-    font-weight: '100';
+    font-weight: 300;
     src: url(./constants/assets/Metroplis/Metropolis-Light.otf);
 }
 
 @font-face {
     font-family: 'Metropolis';
-    font-weight: '400';
-    src: url(./constants/assets/Metropolis/Metropolis-Regular.otf);
+    font-weight: 400;
+    src: url(./constants/assets/Metroplis/Metropolis-Regular.otf);
 }
 
 @font-face {
     font-family: 'Metropolis';
-    font-weight: '700';
-    src: url(./constants/assets/Metropolis/Metropolis-Bold.ttf);
+    font-weight: 600;
+    src: url(./constants/assets/Metroplis/Metropolis-SemiBold.otf);
 }
 
 @font-face {
     font-family: 'Metropolis';
-    font-weight: '900';
-    src: url(./constants/assets/Metropolis/Metropolis-Black.ttf);
+    font-weight: 700;
+    src: url(./constants/assets/Metroplis/Metropolis-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    font-weight: 900;
+    src: url(./constants/assets/Metroplis/Metropolis-Black.otf);
 }

@@ -7,12 +7,13 @@ const Header = () => {
         <Box
             sx={{
                 position: 'fixed',
-                backgroundColor: '#80000000',
-
+                backgroundColor: 'rgba(143, 143, 143, 0.3)',
+                backdropFilter: 'blur(10px)',
                 width: '100%',
                 display: 'flex',
                 justifyContent: 'center',
                 height: '72px',
+                zIndex: 100,
             }}
         >
             <Stack
@@ -25,7 +26,9 @@ const Header = () => {
                     maxWidth: '1200px',
                 }}
             >
-                <img src={IMG_HEADER_LOGO} alt="" />
+                <Box sx={{ cursor: 'pointer' }}>
+                    <img src={IMG_HEADER_LOGO} alt="" />
+                </Box>
                 <Stack direction="row" gap="90px">
                     <GotoButton menu={'verify'} />
                     <GotoButton menu={'api docs'} />

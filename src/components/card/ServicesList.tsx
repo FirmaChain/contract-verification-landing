@@ -5,11 +5,20 @@ import { IKeyValue } from '../../interface'
 
 const ServiceList = () => {
     return (
-        <Stack direction="row" gap="30px" sx={{ width: '100%' }}>
+        <Stack
+            direction="row"
+            justifyContent="center"
+            gap="30px"
+            sx={{ width: '100%' }}
+        >
             {SERVICE_LIST.map((one: IKeyValue, idx: number) => (
                 <Stack direction="column" sx={{ textAlign: 'center' }}>
                     <Box sx={{ pb: '20px' }}>
-                        <img src={one.imgURL} alt="" />
+                        <img
+                            src={one.imgURL}
+                            alt=""
+                            style={{ width: '278px', height: '190px' }}
+                        />
                     </Box>
                     <Typography
                         sx={{

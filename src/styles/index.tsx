@@ -6,6 +6,7 @@ import CallMadeIcon from '@mui/icons-material/CallMade'
 import { IKeyValue } from '../interface'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import { isBrowser } from 'react-device-detect'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 
 export const Container = styled(Box)(({ theme }) => ({
     width: '100%',
@@ -46,7 +47,7 @@ export const RedirectButton = styled(Button)(({ theme }) => ({
     height: '48px',
     fontFamily: Lato,
     fontSize: '16px',
-    fontWeight: 600,
+    fontWeight: 60255,
     lineHeight: 1.63,
     letterSpacing: '-0.24px',
     boxShadow: 'none !important',
@@ -76,7 +77,7 @@ export const OutlinedBlueButton = ({
             // text
             fontFamily: Lato,
             fontSize: isBrowser ? '16px' : '14px',
-            fontWeight: 600,
+            fontWeight: 60255,
             lineHeight: isBrowser ? 1.63 : 1.64,
             letterSpacing: isBrowser ? '-0.24px' : '-0.21px',
             color: '#0875f5',
@@ -116,7 +117,7 @@ export const OutlinedWhiteButton = ({
             // text
             fontFamily: Lato,
             fontSize: isBrowser ? '16px' : '14px',
-            fontWeight: 600,
+            fontWeight: 60255,
             lineHeight: isBrowser ? 1.63 : 1.64,
             letterSpacing: isBrowser ? '-0.24px' : '-0.21px',
             color: '#fff',
@@ -153,7 +154,7 @@ export const ContainedBlueButton = ({
             borderRadius: '4px',
             // font
             fontSize: '18px',
-            fontWeight: 600,
+            fontWeight: 60255,
             fontFamily: Lato,
             lineHeight: 1.22,
             letterSpacing: '-0.27px',
@@ -234,21 +235,28 @@ export const NetworkIndicator = ({ network }: { network: string }) => (
         direction="row"
         gap="5px"
         sx={{
-            width: '101px',
-            height: '33px',
-            border: 'solid 1px rgba(0, 245, 255, 0.55)',
-            backgroundColor: '#0555b2',
+            height: '31px',
             alignItems: 'center',
             justifyContent: 'center',
-            borderRadius: '20px',
-            fontSize: '16px',
-            letterSpacing: '-0.16px',
-            color: '#00f5ff',
+            borderRadius: '15.5px',
             userSelect: 'none',
             cursor: 'pointer',
+            padding: '0 14px',
+            backdropFilter: 'blur(30px)',
+            backgroundColor: 'rgba(255,255,255,0.2)',
+
+            fontSize: '13px',
+            letterSpacing: '-0.2px',
+            color: '#fff',
+            fontWeight: 600,
+            fontFamily: Lato,
         }}
     >
-        <CircleIcon sx={{ fontSize: '10px', lineHeight: 0 }} /> {network}
+        <CircleIcon sx={{ fontSize: '10px', color: '#09f5a4' }} />
+        <Stack direction="row" alignItems="center" gap="2px">
+            {network}
+            <KeyboardArrowDownIcon sx={{ color: '#fff', fontSize: '20px' }} />
+        </Stack>
     </Stack>
 )
 
@@ -266,7 +274,7 @@ export const ListSelectBox = ({
     <Stack
         justifyContent="center"
         onClick={onClick}
-        sx={{ height: '48px', p: '0 14px', cursor: 'pointer' }}
+        sx={{ minHeight: '48px', p: '0 14px', cursor: 'pointer' }}
     >
         <Typography
             sx={{

@@ -10,10 +10,12 @@ import Contact from './view/Contact'
 import Header from './components/header'
 import Footer from './components/footer'
 import { GlobalStateProvider } from './contexts/GlobalStateContext'
+import MobileGNBShade from './components/mobileShade'
 
 const App = () => {
     return (
         <GlobalStateProvider>
+            <MobileGNBShade />
             <Header />
             <Container>
                 <Welcome />

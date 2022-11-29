@@ -49,7 +49,7 @@ body {
 }
 
 .drawerOpen {
-    transition: height 1s;
+    transition: height 1s, padding 1.2s;
 }
 
 .allTransition {

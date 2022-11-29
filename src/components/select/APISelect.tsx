@@ -74,7 +74,7 @@ const Select = ({
                     top: '48px',
                     height: open ? '240px' : '0px',
                     overflow: 'hidden',
-                    border: open ? '1px solid #546079' : 'none',
+                    border: open ? '1px solid #546079' : '1px solid #051527',
                     backgroundColor: '#333b4c',
                     mt: '10px',
                     padding: open ? '4px 0' : '0px',

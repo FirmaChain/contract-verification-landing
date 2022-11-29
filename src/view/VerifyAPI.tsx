@@ -2,7 +2,7 @@ import { Box, Stack } from '@mui/material'
 import { useState } from 'react'
 import { BrowserView, MobileView } from 'react-device-detect'
 import APICodeBox from '../components/card/APICodeBox'
-import Select from '../components/select'
+import Select from '../components/select/APISelect'
 import { M_IMG_VERIFY_API } from '../constants/images'
 
 import {

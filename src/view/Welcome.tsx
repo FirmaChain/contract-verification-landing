@@ -147,7 +147,7 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="movingImg"
+                                            className="merryGoRound-20s"
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
@@ -157,7 +157,7 @@ const Welcome = () => {
                                                 <img
                                                     src={IC_WELCOME_CONTRACT}
                                                     alt=""
-                                                    className="rotate_reverse_5s"
+                                                    className="merryGoRound-reverse-20s"
                                                 />
                                             </div>
                                         </Stack>
@@ -175,7 +175,7 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="movingImg"
+                                            className="merryGoRound-reverse-15s"
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
@@ -185,7 +185,7 @@ const Welcome = () => {
                                             <img
                                                 src={IC_WELCOME_FOLDER}
                                                 alt=""
-                                                className="rotate_reverse_5s"
+                                                className="merryGoRound-15s"
                                             />
                                         </Stack>
                                     </Box>
@@ -202,7 +202,7 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="movingImg"
+                                            className="merryGoRound-25s"
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
@@ -213,7 +213,7 @@ const Welcome = () => {
                                                 <img
                                                     src={IC_WELCOME_SHOPPING}
                                                     alt=""
-                                                    className="rotate_reverse_5s"
+                                                    className="merryGoRound-reverse-25s"
                                                 />
                                             </div>
                                         </Stack>
@@ -230,7 +230,7 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="movingImg"
+                                            className="merryGoRound-25s"
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
@@ -242,7 +242,7 @@ const Welcome = () => {
                                                 <img
                                                     src={IC_WELCOME_BROWSER}
                                                     alt=""
-                                                    className="rotate_reverse_5s"
+                                                    className="merryGoRound-reverse-25s"
                                                 />
                                             </div>
                                         </Stack>

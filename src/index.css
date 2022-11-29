@@ -12,13 +12,13 @@ body {
     monospace;
 } */
 
-@keyframes rot {
+@keyframes rotate {
     100% {
         transform: rotate(360deg);
     }
 }
 
-@keyframes rot_reverse {
+@keyframes reverse-rotate {
     100% {
         transform: rotate(-360deg);
     }
@@ -58,4 +58,32 @@ body {
 
 .allTransition1s {
     transition: all 0.2s;
+}
+
+.merryGoRound-15s {
+    animation: rotate 15s linear infinite;
+}
+.merryGoRound-reverse-15s {
+    animation: reverse-rotate 15s linear infinite;
+}
+
+.merryGoRound-20s {
+    animation: rotate 20s linear infinite;
+}
+.merryGoRound-reverse-20s {
+    animation: reverse-rotate 20s linear infinite;
+}
+
+.merryGoRound-25s {
+    animation: rotate 25s linear infinite;
+}
+.merryGoRound-reverse-25s {
+    animation: reverse-rotate 25s linear infinite;
+}
+
+.merryGoRound-30s {
+    animation: rotate 30s linear infinite;
+}
+.merryGoRound-reverse-30s {
+    animation: reverse-rotate 30s linear infinite;
 }

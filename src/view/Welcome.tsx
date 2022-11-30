@@ -10,12 +10,7 @@ import {
     M_IMG_MAIN_VISUAL,
 } from '../constants/images'
 import { GRAYef, Lato, Metropolis } from '../constants/theme'
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile,
-} from 'react-device-detect'
+import { BrowserView, MobileView, isBrowser } from 'react-device-detect'
 import { useIntersection } from 'react-use'
 import { useEffect, useRef } from 'react'
 import useGlobalState from '../hooks/useGlobalState'
@@ -133,7 +128,11 @@ const Welcome = () => {
                                         height: '565px',
                                     }}
                                 >
-                                    <img src={IMG_WELCOME_BIG_CIRCLE} alt="" />
+                                    <img
+                                        src={IMG_WELCOME_BIG_CIRCLE}
+                                        alt=""
+                                        style={{ maxWidth: '565px' }}
+                                    />
 
                                     <Box
                                         sx={{
@@ -158,6 +157,9 @@ const Welcome = () => {
                                                     src={IC_WELCOME_CONTRACT}
                                                     alt=""
                                                     className="merryGoRound-reverse-20s"
+                                                    style={{
+                                                        maxWidth: '154px',
+                                                    }}
                                                 />
                                             </div>
                                         </Stack>
@@ -186,6 +188,9 @@ const Welcome = () => {
                                                 src={IC_WELCOME_FOLDER}
                                                 alt=""
                                                 className="merryGoRound-15s"
+                                                style={{
+                                                    maxWidth: '117px',
+                                                }}
                                             />
                                         </Stack>
                                     </Box>
@@ -214,6 +219,9 @@ const Welcome = () => {
                                                     src={IC_WELCOME_SHOPPING}
                                                     alt=""
                                                     className="merryGoRound-reverse-25s"
+                                                    style={{
+                                                        maxWidth: '117px',
+                                                    }}
                                                 />
                                             </div>
                                         </Stack>
@@ -243,6 +251,9 @@ const Welcome = () => {
                                                     src={IC_WELCOME_BROWSER}
                                                     alt=""
                                                     className="merryGoRound-reverse-25s"
+                                                    style={{
+                                                        maxWidth: '131px',
+                                                    }}
                                                 />
                                             </div>
                                         </Stack>

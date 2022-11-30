@@ -56,7 +56,11 @@ const Verification = () => {
                         </SectionDesc>
                     </Stack>
                     <Box>
-                        <img src={IMG_VERIFICATION} alt="" />
+                        <img
+                            src={IMG_VERIFICATION}
+                            alt=""
+                            style={{ maxWidth: '100%' }}
+                        />
                     </Box>
                 </Stack>
             </BrowserView>

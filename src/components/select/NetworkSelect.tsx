@@ -56,8 +56,7 @@ const NetworkSelect = ({
                     userSelect: 'none',
                     cursor: 'pointer',
                     padding: '0 14px',
-                    // backdropFilter: 'blur(30px)',
-                    // backgroundColor: 'rgba(255,255,255,0.2)',
+
                     ...BACKGROUND_SX[headerState],
 
                     fontSize: '13px',
@@ -102,6 +101,7 @@ const NetworkSelect = ({
                         onClick={() => onChangeIdx(thisIdx)}
                         direction="row"
                         sx={{
+                            cursor: 'pointer',
                             minHeight: '36px',
                             alignItems: 'center',
                             padding: '0 8px',

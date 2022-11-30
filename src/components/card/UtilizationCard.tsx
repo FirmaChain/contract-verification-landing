@@ -4,7 +4,7 @@ import { Divider, Stack, Typography } from '@mui/material'
 const UtilizationCard = ({ data }: IKeyValue) => {
     return (
         <Stack sx={{ position: 'relative' }} id={data.data.title}>
-            <img src={data.imgURL} alt="" />
+            <img src={data.imgURL} alt="" style={{ maxWidth: '380px' }} />
             <Stack
                 className="hoverShow"
                 sx={{

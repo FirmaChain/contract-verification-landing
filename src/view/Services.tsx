@@ -10,6 +10,7 @@ import { ContentOuterBox, SectionHead, SectionTitle } from '../styles'
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 import { GRAYa0, Lato } from '../constants/theme'
+import { VERIFY_SERVICE } from '../constants/links'
 
 const Services = () => {
     const [idx, setIdx] = useState(0)

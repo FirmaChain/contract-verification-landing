@@ -12,12 +12,8 @@ import {
     SectionHead,
     SectionTitle,
 } from '../styles'
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile,
-} from 'react-device-detect'
+import { BrowserView, MobileView } from 'react-device-detect'
+import { VERIFY_SERVICE } from '../constants/links'
 
 const About = () => {
     return (
@@ -67,7 +63,12 @@ const About = () => {
                                     verification services.
                                 </SectionDesc>
 
-                                <OutlinedBlueButton title="Verify service" />
+                                <OutlinedBlueButton
+                                    title="Verify service"
+                                    onClick={() =>
+                                        window.open(VERIFY_SERVICE, '_blank')
+                                    }
+                                />
                             </Stack>
                             <Box sx={{ position: 'absolute', right: 0 }}>
                                 <img
@@ -176,6 +177,9 @@ const About = () => {
                             <OutlinedBlueButton
                                 title="Verify Service"
                                 sx={{ mb: '50px' }}
+                                onClick={() =>
+                                    window.open(VERIFY_SERVICE, '_blank')
+                                }
                             />
 
                             <Box>

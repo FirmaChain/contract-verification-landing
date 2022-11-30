@@ -1,4 +1,3 @@
-import './App.css'
 import Welcome from './view/Welcome'
 import { Container } from './styles'
 import About from './view/About'

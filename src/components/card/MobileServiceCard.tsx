@@ -4,7 +4,11 @@ import { Lato } from '../../constants/theme'
 
 const MobileServiceCard = ({ data }: IKeyValue) => {
     return (
-        <Stack sx={{ position: 'relative' }} alignItems="center">
+        <Stack
+            sx={{ position: 'relative' }}
+            alignItems="center"
+            onClick={() => data.goURL && window.open(data.goURL, '_blank')}
+        >
             <Box sx={{ pb: '20px' }}>
                 <img src={data.imgURL} alt="" style={{ width: '278px' }} />
             </Box>

@@ -1,8 +1,8 @@
 import { Box, Stack, Typography } from '@mui/material'
 import {
-    M_IMG_HEADER_LOGO,
-    PC_IMG_HEADER_LOGO,
-    M_IMG_HEADER_LOGO_BK,
+    M_IMG_LOGO_WH,
+    IMG_LOGO_WH,
+    M_IMG_LOGO_BK,
 } from '../../constants/images'
 import { GotoButton, OutlinedBlueButton } from '../../styles'
 import { BrowserView, MobileView } from 'react-device-detect'
@@ -17,6 +17,7 @@ import ListItem from '@mui/material/ListItem'
 import CallMadeIcon from '@mui/icons-material/CallMade'
 import useGlobalState from '../../hooks/useGlobalState'
 import NetworkSelect from '../select/NetworkSelect'
+import { VERIFY_SERVICE } from '../../constants/links'
 
 const Header = () => {
     const [idx, setIdx] = useState(0)
@@ -49,11 +50,7 @@ const Header = () => {
         { color: '#343539' },
     ]
 
-    const HEADER_IMAGE_URL = [
-        PC_IMG_HEADER_LOGO,
-        PC_IMG_HEADER_LOGO,
-        M_IMG_HEADER_LOGO_BK,
-    ]
+    const HEADER_IMAGE_URL = [IMG_LOGO_WH, IMG_LOGO_WH, M_IMG_LOGO_BK]
 
     return (
         <>
@@ -92,6 +89,9 @@ const Header = () => {
                             <GotoButton
                                 menu={'verify'}
                                 sx={HEADER_TEXT_SX[headerState]}
+                                onClick={() =>
+                                    window.open(VERIFY_SERVICE, '_blank')
+                                }
                             />
                             <GotoButton
                                 menu={'api docs'}
@@ -138,8 +138,8 @@ const Header = () => {
                             <img
                                 src={
                                     mobileHeaderOpen || headerState > 0
-                                        ? M_IMG_HEADER_LOGO_BK
-                                        : M_IMG_HEADER_LOGO
+                                        ? M_IMG_LOGO_BK
+                                        : M_IMG_LOGO_WH
                                 }
                                 alt=""
                                 style={{ width: '152px' }}

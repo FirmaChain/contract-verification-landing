@@ -1,10 +1,8 @@
 // Header
-export const PC_IMG_HEADER_LOGO = '/images/header/logo-verify-wh.png'
-export const M_IMG_HEADER_LOGO = '/images/header/logo-m-verify-wh.webp'
-export const M_IMG_HEADER_LOGO_BK = '/images/header/logo-m-verify-bk.webp'
-
-// Footer
-export const IMG_FOOTER_LOGO = '/images/footer/logo-verify-bk.png'
+export const IMG_LOGO_WH = '/images/global/logo-verify-wh.png'
+export const IMG_LOGO_BK = '/images/global/logo-verify-bk.png'
+export const M_IMG_LOGO_WH = '/images/global/logo-m-verify-wh.webp'
+export const M_IMG_LOGO_BK = '/images/global/logo-m-verify-bk.webp'
 
 // Welcome
 export const PC_IMG_WELCOME_BACKGROUND = '/images/welcome/img-main-bg.webp'
@@ -53,3 +51,8 @@ export const IMG_SERVICE_VERIFY = 'images/service/img-service-verify.webp'
 export const IMG_SERVICE_FAUCET = 'images/service/img-service-faucet.webp'
 export const IMG_SERVICE_DOCS = 'images/service/img-service-docs.webp'
 export const IMG_SERVICE_DONUE = 'images/service/img-service-donue.webp'
+
+export const M_IMG_SERVICE_VERIFY = 'images/service/img-m-service-verify.webp'
+export const M_IMG_SERVICE_FAUCET = 'images/service/img-m-service-faucet.webp'
+export const M_IMG_SERVICE_DOCS = 'images/service/img-m-service-docs.webp'
+export const M_IMG_SERVICE_DONUE = 'images/service/img-m-service-donue.webp'

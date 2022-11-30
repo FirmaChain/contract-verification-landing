@@ -11,7 +11,12 @@ import {
     M_IMG_UTILIZATION_ECOMMERCE,
     M_IMG_UTILIZATION_ECONTRACT,
     M_IMG_UTILIZATION_SERVICE,
+    M_IMG_SERVICE_VERIFY,
+    M_IMG_SERVICE_FAUCET,
+    M_IMG_SERVICE_DOCS,
+    M_IMG_SERVICE_DONUE,
 } from './images'
+import { VERIFY_SERVICE } from './links'
 
 export const UTILIZATION_DATA: IKeyValue[] = [
     {
@@ -61,18 +66,26 @@ export const UTILIZATION_DATA: IKeyValue[] = [
 
 export const SERVICE_LIST: IKeyValue[] = [
     {
-        imgURL: IMG_SERVICE_VERIFY,
+        imgURL: isBrowser ? IMG_SERVICE_VERIFY : M_IMG_SERVICE_VERIFY,
+        goURL: VERIFY_SERVICE,
         title: 'Verify',
         desc: 'Verification service',
     },
-    { imgURL: IMG_SERVICE_FAUCET, title: 'Faucet', desc: 'Testnet faucet' },
     {
-        imgURL: IMG_SERVICE_DOCS,
+        imgURL: isBrowser ? IMG_SERVICE_FAUCET : M_IMG_SERVICE_FAUCET,
+        goURL: '',
+        title: 'Faucet',
+        desc: 'Testnet faucet',
+    },
+    {
+        imgURL: isBrowser ? IMG_SERVICE_DOCS : M_IMG_SERVICE_DOCS,
+        goURL: '',
         title: 'Verify docs',
         desc: 'FIRMA VERIFY Guide',
     },
     {
-        imgURL: IMG_SERVICE_DONUE,
+        imgURL: isBrowser ? IMG_SERVICE_DONUE : M_IMG_SERVICE_DONUE,
+        goURL: '',
         title: 'Donue',
         desc: 'E-Contract verification',
     },

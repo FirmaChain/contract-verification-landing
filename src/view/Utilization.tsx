@@ -8,12 +8,7 @@ import {
     SectionHead,
     SectionTitle,
 } from '../styles'
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile,
-} from 'react-device-detect'
+import { BrowserView, MobileView } from 'react-device-detect'
 import MobileUtilizationCard from '../components/card/MobileUtilizationCard'
 import { useState } from 'react'
 import Indicator from '../components/indicator'

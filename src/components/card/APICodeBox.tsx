@@ -48,7 +48,7 @@ const APICodeBox = () => {
 
     return (
         <Stack sx={{ position: 'relative' }}>
-            <img src={IMG_VERIFY_API} alt="" />
+            <img src={IMG_VERIFY_API} alt="" style={{ maxWidth: '894px' }} />
             <MenuButton
                 title="Create contract file"
                 now={idx}

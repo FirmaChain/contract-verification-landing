@@ -12,7 +12,13 @@ const ServiceList = () => {
             sx={{ width: '100%' }}
         >
             {SERVICE_LIST.map((one: IKeyValue, idx: number) => (
-                <Stack direction="column" sx={{ textAlign: 'center' }}>
+                <Stack
+                    direction="column"
+                    sx={{ textAlign: 'center', cursor: 'pointer' }}
+                    onClick={() =>
+                        one.goURL && window.open(one.goURL, '_blank')
+                    }
+                >
                     <Box sx={{ pb: '20px' }}>
                         <img
                             src={one.imgURL}

@@ -1,4 +1,5 @@
 import { Box, Divider, Stack, Typography } from '@mui/material'
+import { isBrowser, isMobile } from 'react-device-detect'
 import { IMG_FOOTER_LOGO } from '../../constants/images'
 import { GRAYef, Lato } from '../../constants/theme'
 import { FooterGotoButton } from '../../styles'
@@ -9,28 +10,38 @@ const Footer = () => {
             alignItems="center"
             sx={{
                 width: '100%',
-                borderTop: `1px solid ${GRAYef}`,
-                p: '40px 0 60px 0',
+                borderTop: isBrowser ? `1px solid ${GRAYef}` : 'none',
+                p: isBrowser ? '40px 0 60px 0' : '30px 16px 48px 16px',
+                boxSizing: 'border-box',
             }}
         >
             <Stack sx={{ width: '100%', maxWidth: '1200px' }}>
                 <Stack
-                    direction="row"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    sx={{ pb: '40px' }}
+                    direction={isBrowser ? 'row' : 'column'}
+                    justifyContent={isBrowser ? 'space-between' : 'center'}
+                    alignItems={isBrowser ? 'center' : 'flex-start'}
+                    sx={{ pb: isBrowser ? '40px' : '30px' }}
+                    gap={isBrowser ? 0 : '22px'}
                 >
                     <Box>
                         <img src={IMG_FOOTER_LOGO} alt="" />
                     </Box>
-                    <Stack direction="row" gap="80px">
+                    <Stack direction="row" gap={isBrowser ? '80px' : '20px'}>
                         <FooterGotoButton menu="verify" />
                         <FooterGotoButton menu="api docs" />
                         <FooterGotoButton menu="ecosystem" />
                     </Stack>
                 </Stack>
 
-                <Stack direction="row" justifyContent="space-between">
+                {isMobile && (
+                    <Divider sx={{ borderColor: GRAYef, mb: '22px' }} />
+                )}
+
+                <Stack
+                    direction={isBrowser ? 'row' : 'column'}
+                    justifyContent="space-between"
+                    gap={isBrowser ? 0 : '20px'}
+                >
                     <Stack direction="row" gap="16px" alignItems="center">
                         <Typography
                             sx={{
@@ -67,8 +78,8 @@ const Footer = () => {
                             letterSpacing: '-0.14px',
                         }}
                     >
-                        ⓒ FirmaChain Pte. Ltd. | All Right Reserved. 71 Robinson
-                        Road, Singapore, 068895
+                        ⓒ FirmaChain Pte. Ltd. {isBrowser ? '|' : <br />}
+                        All Right Reserved. 71 Robinson Road, Singapore, 068895
                     </Typography>
                 </Stack>
             </Stack>

@@ -12,17 +12,24 @@ body {
     monospace;
 } */
 
-@keyframes upAndDown {
-    0% {
-        margin-top: -10px;
-    }
+@keyframes rot {
     100% {
-        margin-top: 0px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rot_reverse {
+    100% {
+        transform: rotate(-360deg);
     }
 }
 
 .movingImg {
-    animation: upAndDown 1s ease-in-out alternate infinite;
+    animation: rot 25s linear infinite;
+}
+
+.rotate_reverse_5s {
+    animation: rot_reverse 25s linear infinite;
 }
 
 .buttonHover {
@@ -31,4 +38,20 @@ body {
 
 .hoverShow {
     transition: opacity 0.5s;
+}
+
+.horizentalScroll {
+    transition: transform 1s;
+}
+
+.buttonSelect {
+    transition: width 1s, color 1s;
+}
+
+.drawerOpen {
+    transition: height 1s;
+}
+
+.allTransition {
+    transition: all 0.2s;
 }

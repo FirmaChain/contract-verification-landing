@@ -1,10 +1,11 @@
 import { IKeyValue } from '../../interface'
 import { Divider, Stack, Typography } from '@mui/material'
 
-const UtilizationCard = ({ data }: IKeyValue) => {
+const MobileUtilizationCard = ({ data }: IKeyValue) => {
     return (
-        <Stack sx={{ position: 'relative' }} id={data.data.title}>
-            <img src={data.imgURL} alt="" />
+        <Stack sx={{ position: 'relative' }} id={''}>
+            <img src={data.imgURL} alt="" style={{ width: '278px' }} />
+
             <Stack
                 className="hoverShow"
                 sx={{
@@ -16,7 +17,7 @@ const UtilizationCard = ({ data }: IKeyValue) => {
                     borderRadius: '12px',
                     opacity: 0,
                     userSelect: 'none',
-                    padding: '0 50px',
+                    padding: '0 28px',
                     boxSizing: 'border-box',
                     ':hover': {
                         opacity: 1,
@@ -29,18 +30,17 @@ const UtilizationCard = ({ data }: IKeyValue) => {
                 }}
             >
                 <Stack
-                    sx={{
-                        width: data.width,
-                        alignItems: 'center',
-                        gap: '20px',
-                    }}
+                    direction="column"
+                    alignItems="center"
+                    sx={{ width: data.width }}
                 >
                     <Typography
                         sx={{
-                            fontSize: '28px',
+                            fontSize: '24px',
                             fontWeight: 'bold',
-
-                            letterSpacing: '-0.42px',
+                            lineHeight: 0.75,
+                            letterSpacing: '-0.36px',
+                            pb: '20px',
                         }}
                     >
                         {data.data.title}
@@ -54,17 +54,19 @@ const UtilizationCard = ({ data }: IKeyValue) => {
                             width: '100%',
                             color: '#fff',
                             backgroundColor: '#fff',
+                            mb: '20px',
                         }}
                     />
 
                     <Stack sx={{ width: '100%' }}>
                         {data.data.list.map((one: string, idx: number) => (
                             <Typography
+                                key={one}
                                 sx={{
-                                    fontSize: '22px',
+                                    fontSize: '18px',
                                     fontWeight: 500,
-                                    lineHeight: 2,
-                                    letterSpacing: '-0.33px',
+                                    lineHeight: 2.11,
+                                    letterSpacing: '-0.27px',
                                 }}
                             >
                                 - {one}
@@ -77,4 +79,4 @@ const UtilizationCard = ({ data }: IKeyValue) => {
     )
 }
 
-export default UtilizationCard
+export default MobileUtilizationCard

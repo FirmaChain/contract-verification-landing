@@ -1,62 +1,111 @@
-import { Stack } from '@mui/material'
-import { IMG_VERIFICATION } from '../constants/images'
-import { SectionDesc, SectionHead, SectionTitle } from '../styles'
+import { Box, Stack } from '@mui/material'
+import { BrowserView, MobileView } from 'react-device-detect'
+import { IMG_VERIFICATION, M_IMG_VERIFICATION } from '../constants/images'
+import {
+    ContentOuterBox,
+    SectionDesc,
+    SectionHead,
+    SectionTitle,
+} from '../styles'
 
 const Verification = () => {
     return (
-        <Stack
-            sx={{
-                width: '100%',
-                alignItems: 'center',
-            }}
-        >
-            <Stack
-                sx={{
-                    maxWidth: '1200px',
-                    width: '100%',
-                    pt: '130px',
-                    pb: '160px',
-                    alignItems: 'center',
-                }}
-            >
+        <ContentOuterBox>
+            <BrowserView>
                 <Stack
-                    direction="row"
                     sx={{
                         width: '100%',
-                        alignItems: 'flex-end',
-                        justifyContent: 'space-between',
-                        pb: '80px',
+                        alignItems: 'center',
+                        p: '130px 0 160px 0',
+                        maxWidth: '1200px',
                     }}
                 >
-                    <Stack direction="column" justifyContent="flex-start">
-                        <SectionTitle sx={{ pb: '20px', color: '#0875f5' }}>
-                            Verification service
+                    <Stack
+                        direction="row"
+                        sx={{
+                            width: '100%',
+                            alignItems: 'flex-end',
+                            justifyContent: 'space-between',
+                            pb: '80px',
+                        }}
+                    >
+                        <Stack direction="column" justifyContent="flex-start">
+                            <SectionTitle sx={{ color: '#0875f5' }}>
+                                Verification service
+                            </SectionTitle>
+                            <SectionHead
+                                sx={{
+                                    width: '773px',
+                                }}
+                            >
+                                Verification service completed with FIRMA
+                                VERIFY.
+                            </SectionHead>
+                        </Stack>
+                        <SectionDesc
+                            sx={{
+                                width: '357px',
+                                color: '#4a4d51',
+                                textAlign: 'right',
+                            }}
+                        >
+                            With FIRMA VERIFY, reliable information <br />
+                            can be recorded and verified by anyone.
+                            <br /> (The scope of support will continue to
+                            expand.)
+                        </SectionDesc>
+                    </Stack>
+                    <Box>
+                        <img src={IMG_VERIFICATION} alt="" />
+                    </Box>
+                </Stack>
+            </BrowserView>
+            <MobileView>
+                <Stack
+                    direction="column"
+                    alignItems="center"
+                    sx={{ width: '100%', p: '70px 0', gap: '50px' }}
+                >
+                    <Stack alignItems="center">
+                        <SectionTitle sx={{ color: '#0875f5' }}>
+                            verification service
                         </SectionTitle>
                         <SectionHead
                             sx={{
-                                width: '773px',
-                                letterSpacing: '-1.25px !important',
+                                color: '#161618',
+                                textAlign: 'center',
+                                pb: '24px',
                             }}
                         >
-                            Verification service completed with FIRMA VERIFY.
+                            Verification service
+                            <br />
+                            completed
+                            <br />
+                            with FIRMA VERIFY.
                         </SectionHead>
+                        <SectionDesc
+                            sx={{
+                                color: '#4a4d51',
+                                width: '318px',
+                                textAlign: 'center',
+                            }}
+                        >
+                            With FIRMA VERIFY, reliable information
+                            <br /> can be recorded and verified by anyone.
+                            <br /> (The scope of support will continue to
+                            expand.)
+                        </SectionDesc>
                     </Stack>
-                    <SectionDesc
-                        sx={{
-                            width: '357px',
-                            color: '#4a4d51',
-                            textAlign: 'right',
-                        }}
-                    >
-                        With FIRMA VERIFY, reliable information <br />
-                        can be recorded and verified by anyone.
-                        <br /> (The scope of support will continue to expand.)
-                    </SectionDesc>
+                    <Box>
+                        <img
+                            src={M_IMG_VERIFICATION}
+                            alt=""
+                            style={{ maxWidth: '343px' }}
+                        />
+                    </Box>
                 </Stack>
-
-                <img src={IMG_VERIFICATION} alt="" />
-            </Stack>
-        </Stack>
+            </MobileView>
+        </ContentOuterBox>
     )
 }
 

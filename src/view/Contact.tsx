@@ -1,67 +1,110 @@
 import { Stack, Typography } from '@mui/material'
+import { BrowserView, MobileView } from 'react-device-detect'
 import { Lato, Metropolis } from '../constants/theme'
-import { ContainedBlueButton } from '../styles'
+import { ContainedBlueButton, ContentOuterBox } from '../styles'
 
 const Contact = () => {
     return (
-        <Stack
-            sx={{
-                width: '100%',
-                alignItems: 'center',
-            }}
-        >
-            <Stack
-                sx={{
-                    maxWidth: '1200px',
-                    width: '100%',
-                    pt: '130px',
-                    pb: '160px',
-                    alignItems: 'center',
-                }}
-            >
-                <Stack
-                    sx={{
-                        width: '100%',
-                        height: '320px',
-                        borderRadius: '16px',
-                        backgroundColor: '#ebf6ff',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <Typography
+        <>
+            <BrowserView style={{ width: '100%' }}>
+                <ContentOuterBox>
+                    <Stack
                         sx={{
-                            fontSize: '44px',
-                            fontFamily: Metropolis,
-                            color: '#161718',
-                            fontWeight: 'bold',
-                            lineHeight: 1.27,
-                            letterSpacing: '-1.1px',
-                            pb: '24px',
+                            maxWidth: '1200px',
+                            width: '100%',
+                            pb: '80px',
+                            alignItems: 'center',
                         }}
                     >
-                        Get in Touch!
-                    </Typography>
-                    <Typography
+                        <Stack
+                            sx={{
+                                width: '100%',
+                                height: '320px',
+                                borderRadius: '16px',
+                                backgroundColor: '#ebf6ff',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <Typography
+                                sx={{
+                                    fontSize: '44px',
+                                    fontFamily: Metropolis,
+                                    color: '#161718',
+                                    fontWeight: 'bold',
+                                    lineHeight: 1.27,
+                                    letterSpacing: '-1.1px',
+                                    pb: '24px',
+                                }}
+                            >
+                                Get in Touch!
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontFamily: Lato,
+                                    fontSize: '18px',
+                                    lineHeight: 1.22,
+                                    letterSpacing: '-0.27px',
+                                    color: '#4a4d51',
+                                    pb: '40px',
+                                }}
+                            >
+                                If you have difficulty applying the API,
+                                FIRMACHAIN will support you directly.
+                            </Typography>
+                            <ContainedBlueButton
+                                title="Contact us"
+                                onClick={() => {}}
+                            />
+                        </Stack>
+                    </Stack>
+                </ContentOuterBox>
+            </BrowserView>
+            <MobileView style={{ width: '100%' }}>
+                <ContentOuterBox sx={{ backgroundColor: '#ebf6ff' }}>
+                    <Stack
                         sx={{
-                            fontFamily: Lato,
-                            fontSize: '18px',
-                            lineHeight: 1.22,
-                            letterSpacing: '-0.27px',
-                            color: '#4a4d51',
-                            pb: '40px',
+                            width: '100%',
+                            alignItems: 'center',
+                            p: '50px 0',
                         }}
                     >
-                        If you have difficulty applying the API, FIRMACHAIN will
-                        support you directly.
-                    </Typography>
-                    <ContainedBlueButton
-                        title="Contact us"
-                        onClick={() => {}}
-                    />
-                </Stack>
-            </Stack>
-        </Stack>
+                        <Typography
+                            sx={{
+                                fontSize: '30px',
+                                fontFamily: Metropolis,
+                                color: '#161718',
+                                fontWeight: 'bold',
+                                lineHeight: 1.87,
+                                letterSpacing: '-0.75px',
+                                pb: '16px',
+                            }}
+                        >
+                            Get in Touch!
+                        </Typography>
+                        <Typography
+                            sx={{
+                                width: '266px',
+                                fontFamily: Lato,
+                                fontSize: '16px',
+                                lineHeight: 1.25,
+                                letterSpacing: '-0.24px',
+                                color: '#4a4d51',
+                                pb: '30px',
+                                textAlign: 'center',
+                            }}
+                        >
+                            If you have difficulty applying the API, FIRMACHAIN
+                            will support you directly.
+                        </Typography>
+                        <ContainedBlueButton
+                            title="Contact us"
+                            onClick={() => {}}
+                        />
+                    </Stack>
+                </ContentOuterBox>
+            </MobileView>
+        </>
     )
 }
 

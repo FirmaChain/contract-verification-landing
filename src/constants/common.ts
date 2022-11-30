@@ -1,17 +1,24 @@
+import { isBrowser } from 'react-device-detect'
 import { IKeyValue } from '../interface'
 import {
     IMG_SERVICE_DOCS,
     IMG_SERVICE_FAUCET,
     IMG_SERVICE_VERIFY,
     IMG_SERVICE_DONUE,
-    IMG_UTILIZATION_ECOMMERCE,
     IMG_UTILIZATION_ECONTRACT,
+    IMG_UTILIZATION_ECOMMERCE,
     IMG_UTILIZATION_SERVICE,
+    M_IMG_UTILIZATION_ECOMMERCE,
+    M_IMG_UTILIZATION_ECONTRACT,
+    M_IMG_UTILIZATION_SERVICE,
 } from './images'
 
 export const UTILIZATION_DATA: IKeyValue[] = [
     {
-        imgURL: IMG_UTILIZATION_ECONTRACT,
+        width: isBrowser ? '198px' : '162px',
+        imgURL: isBrowser
+            ? IMG_UTILIZATION_ECONTRACT
+            : M_IMG_UTILIZATION_ECONTRACT,
         data: {
             title: 'E-Contract',
             list: [
@@ -23,7 +30,10 @@ export const UTILIZATION_DATA: IKeyValue[] = [
         },
     },
     {
-        imgURL: IMG_UTILIZATION_ECOMMERCE,
+        width: isBrowser ? '212px' : '173px',
+        imgURL: isBrowser
+            ? IMG_UTILIZATION_ECOMMERCE
+            : M_IMG_UTILIZATION_ECOMMERCE,
         data: {
             title: 'E-Commerce',
             list: [
@@ -35,7 +45,8 @@ export const UTILIZATION_DATA: IKeyValue[] = [
         },
     },
     {
-        imgURL: IMG_UTILIZATION_SERVICE,
+        width: isBrowser ? '270px' : '222px',
+        imgURL: isBrowser ? IMG_UTILIZATION_SERVICE : M_IMG_UTILIZATION_SERVICE,
         data: {
             title: 'Service',
             list: [

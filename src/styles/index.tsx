@@ -5,6 +5,7 @@ import CircleIcon from '@mui/icons-material/Circle'
 import CallMadeIcon from '@mui/icons-material/CallMade'
 import { IKeyValue } from '../interface'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+import { isBrowser } from 'react-device-detect'
 
 export const Container = styled(Box)(({ theme }) => ({
     width: '100%',
@@ -16,27 +17,27 @@ export const Container = styled(Box)(({ theme }) => ({
 
 export const SectionTitle = styled(Typography)(({ theme }) => ({
     textTransform: 'uppercase',
-    paddingBottom: '20px',
+    paddingBottom: isBrowser ? '20px' : '16px',
     fontFamily: Metropolis,
-    fontSize: '18px',
+    fontSize: isBrowser ? '18px' : '14px',
     fontWeight: 'bold',
-    lineHeight: 1,
-    letterSpacing: '-0.45px',
+    lineHeight: isBrowser ? 1 : 1.29,
+    letterSpacing: isBrowser ? '-0.45px' : '-0.35px',
 }))
 
 export const SectionHead = styled(Typography)(({ theme }) => ({
     fontFamily: Metropolis,
-    fontSize: '54px',
+    fontSize: isBrowser ? '54px' : '32px',
     fontWeight: 'bold',
-    lineHeight: 1.07,
-    letterSpacing: '-1.35px',
+    lineHeight: isBrowser ? 1.07 : 1.06,
+    letterSpacing: isBrowser ? '-1.35px' : '-0.48px',
 }))
 
 export const SectionDesc = styled(Typography)(({ theme }) => ({
     fontFamily: Lato,
-    fontSize: '18px',
-    lineHeight: 1.22,
-    letterSpacing: '-0.27px',
+    fontSize: isBrowser ? '18px' : '16px',
+    lineHeight: isBrowser ? 1.22 : 1.25,
+    letterSpacing: isBrowser ? '-0.27px' : '-0.24px',
 }))
 
 export const RedirectButton = styled(Button)(({ theme }) => ({
@@ -65,8 +66,8 @@ export const OutlinedBlueButton = ({
         className="buttonHover"
         sx={{
             // box
-            width: '200px',
-            height: '48px',
+            width: isBrowser ? '200px' : '162px',
+            height: isBrowser ? '48px' : '42px',
             border: '1px solid #0875f5',
             borderRadius: '4px',
             userSelect: 'none',
@@ -74,10 +75,10 @@ export const OutlinedBlueButton = ({
 
             // text
             fontFamily: Lato,
-            fontSize: '16px',
+            fontSize: isBrowser ? '16px' : '14px',
             fontWeight: 600,
-            lineHeight: 1.63,
-            letterSpacing: '-0.24px',
+            lineHeight: isBrowser ? 1.63 : 1.64,
+            letterSpacing: isBrowser ? '-0.24px' : '-0.21px',
             color: '#0875f5',
             // event: hover
             ':hover': {
@@ -105,8 +106,8 @@ export const OutlinedWhiteButton = ({
         className="buttonHover"
         sx={{
             // box
-            width: '200px',
-            height: '48px',
+            width: isBrowser ? '200px' : '162px',
+            height: isBrowser ? '48px' : '42px',
             border: '1px solid #fff',
             borderRadius: '4px',
             userSelect: 'none',
@@ -114,11 +115,11 @@ export const OutlinedWhiteButton = ({
 
             // text
             fontFamily: Lato,
-            fontSize: '16px',
-            color: '#fff',
+            fontSize: isBrowser ? '16px' : '14px',
             fontWeight: 600,
-            lineHeight: 1.63,
-            letterSpacing: '-0.24px',
+            lineHeight: isBrowser ? 1.63 : 1.64,
+            letterSpacing: isBrowser ? '-0.24px' : '-0.21px',
+            color: '#fff',
 
             // event: hover
             ':hover': {
@@ -148,7 +149,7 @@ export const ContainedBlueButton = ({
         sx={{
             width: '200px',
             height: '48px',
-            backgroundColor: '#0875f5',
+            backgroundColor: isBrowser ? '#0875f5' : '#0698f7',
             borderRadius: '4px',
             // font
             fontSize: '18px',
@@ -250,3 +251,41 @@ export const NetworkIndicator = ({ network }: { network: string }) => (
         <CircleIcon sx={{ fontSize: '10px', lineHeight: 0 }} /> {network}
     </Stack>
 )
+
+export const ListSelectBox = ({
+    title,
+    nowIdx,
+    idx,
+    onClick,
+}: {
+    title: string
+    onClick: any
+    nowIdx: number
+    idx: number
+}) => (
+    <Stack
+        justifyContent="center"
+        onClick={onClick}
+        sx={{ height: '48px', p: '0 14px', cursor: 'pointer' }}
+    >
+        <Typography
+            sx={{
+                fontFamily: Lato,
+                fontSize: '16px',
+                lineHeight: 1.13,
+                letterSpacing: '-0.24px',
+                color: nowIdx === idx ? '#999' : '#fff',
+            }}
+        >
+            {title}
+        </Typography>
+    </Stack>
+)
+
+export const ContentOuterBox = styled(Stack)(({ theme }) => ({
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'center',
+    boxSizing: 'border-box',
+    padding: '0 30px',
+}))

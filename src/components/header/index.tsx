@@ -3,6 +3,7 @@ import {
     M_IMG_LOGO_WH,
     IMG_LOGO_WH,
     M_IMG_LOGO_BK,
+    IC_OPEN_IN_NEW_DARK_GREY,
 } from '../../constants/images'
 import { PCHeaderButton, OutlinedBlueButton } from '../../styles'
 import { BrowserView, MobileView } from 'react-device-detect'
@@ -59,7 +60,8 @@ const Header = () => {
                     className="allTransition1s"
                     sx={{
                         position: 'fixed',
-
+                        boxSizing: 'border-box',
+                        p: '0 30px',
                         width: '100%',
                         display: 'flex',
                         justifyContent: 'center',
@@ -131,9 +133,13 @@ const Header = () => {
                         direction="row"
                         alignItems="center"
                         justifyContent="space-between"
-                        sx={{ width: '100%', p: '15px 14px' }}
+                        sx={{ width: '100%', p: '14px 14px' }}
                     >
-                        <Box>
+                        <Stack
+                            alignItems="center"
+                            justifyContent="flex-end"
+                            sx={{ height: '100%' }}
+                        >
                             <img
                                 src={
                                     mobileHeaderOpen || headerState > 0
@@ -143,8 +149,12 @@ const Header = () => {
                                 alt=""
                                 style={{ width: '152px' }}
                             />
-                        </Box>
-                        <Box>
+                        </Stack>
+                        <Stack
+                            alignItems="center"
+                            justifyContent="center"
+                            sx={{ height: '100%' }}
+                        >
                             {mobileHeaderOpen ? (
                                 <CloseIcon
                                     sx={{ fontSize: '32px', color: GRAY50 }}
@@ -160,7 +170,7 @@ const Header = () => {
                                     onClick={() => setMobileHeaderOpen(true)}
                                 />
                             )}
-                        </Box>
+                        </Stack>
                     </Stack>
                 </Box>
                 <Drawer
@@ -177,7 +187,7 @@ const Header = () => {
                             backgroundColor: 'transparent',
                         },
                         '& .MuiPaper-root': {
-                            padding: '0 16px 30px 16px',
+                            padding: '0 16px 20px 16px',
                         },
                     }}
                 >
@@ -186,9 +196,8 @@ const Header = () => {
                             <ListItem
                                 key={text}
                                 sx={{
-                                    p: '20px 0',
-                                    gap: '5px',
-                                    color: '#343539',
+                                    p: '16px 0',
+                                    color: '#4a4d51',
                                     ':hover': {
                                         color: '#161718',
                                     },
@@ -206,23 +215,28 @@ const Header = () => {
                                 >
                                     {text}
                                 </Typography>
-                                <CallMadeIcon sx={{ fontSize: '16px' }} />
+                                <img
+                                    src={IC_OPEN_IN_NEW_DARK_GREY}
+                                    alt=""
+                                    style={{ width: '20px' }}
+                                />
                             </ListItem>
-                            {index !== 2 && (
+                            {/* {index !== 2 && (
                                 <Divider
                                     sx={{ border: `1px dashed ${GRAYef}` }}
                                 />
-                            )}
+                            )} */}
                         </>
                     ))}
                     <OutlinedBlueButton
+                        textOnly
                         title="Contact"
                         sx={{
                             width: 'calc(100% - 2px)',
                             height: '48px',
                             fontSize: '16px',
                             fontWeight: 600,
-                            mt: '10px',
+                            mt: '28px',
                         }}
                     />
                 </Drawer>

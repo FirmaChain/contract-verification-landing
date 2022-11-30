@@ -144,7 +144,7 @@ const Utilization = () => {
                                 gap: '30px',
 
                                 transform: `translateX(${
-                                    69 - 278 * idx - 30 * idx
+                                    16 - 278 * idx - 30 * idx
                                 }px)`,
                             }}
                         >

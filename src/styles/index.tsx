@@ -7,6 +7,7 @@ import { IKeyValue } from '../interface'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import { isBrowser } from 'react-device-detect'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import { IC_OPEN_IN_NEW_GREY } from '../constants/images'
 
 export const Container = styled(Box)(({ theme }) => ({
     width: '100%',
@@ -57,10 +58,12 @@ export const OutlinedBlueButton = ({
     title,
     sx,
     onClick,
+    textOnly,
 }: {
     title: string
     sx?: IKeyValue
     onClick?: any
+    textOnly?: boolean
 }) => (
     <Stack
         onClick={onClick}
@@ -92,7 +95,8 @@ export const OutlinedBlueButton = ({
             ...sx,
         }}
     >
-        {title} <KeyboardArrowRightIcon />
+        {title}
+        {!textOnly && <KeyboardArrowRightIcon />}
     </Stack>
 )
 
@@ -230,15 +234,15 @@ export const FooterGotoButton = ({
             sx={{
                 fontFamily: Lato,
                 fontWeight: 'bold',
-                fontSize: '16px',
-                lineHeight: '16px',
-                letterSpacing: '-0.16px',
+                fontSize: isBrowser ? '16px' : '14px',
+                lineHeight: isBrowser ? 1.25 : 1.43,
+                letterSpacing: isBrowser ? '-0.16px' : '-0.14px',
                 textTransform: 'uppercase',
             }}
         >
             {menu}
         </Typography>
-        <CallMadeIcon sx={{ fontSize: '20px' }} />
+        <img src={IC_OPEN_IN_NEW_GREY} alt="" style={{ width: '20px' }} />
     </Stack>
 )
 

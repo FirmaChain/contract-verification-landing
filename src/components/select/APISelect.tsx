@@ -30,7 +30,7 @@ const Select = ({
     }
 
     return (
-        <Stack sx={{ width: '100%', position: 'relative' }}>
+        <Stack sx={{ width: 'calc(100%)', position: 'relative' }}>
             <Stack
                 onClick={() => setOpen(!open)}
                 direction="row"
@@ -65,31 +65,37 @@ const Select = ({
                     }}
                 />
             </Stack>
-
-            <Stack
+            <div
                 className="drawerOpen"
-                sx={{
-                    width: '100%',
+                style={{
+                    width: 'calc(100%)',
                     position: 'absolute',
                     top: '48px',
-                    height: open ? '240px' : '0px',
+                    height: open ? 48 * LIST.length + 20 : 0,
                     overflow: 'hidden',
-                    border: open ? '1px solid #546079' : '1px solid #051527',
-                    backgroundColor: '#333b4c',
-                    mt: '10px',
-                    padding: open ? '4px 0' : '0px',
-                    borderRadius: '4px',
                 }}
             >
-                {LIST.map((one: string, thisIdx: number) => (
-                    <ListSelectBox
-                        title={one}
-                        nowIdx={idx}
-                        idx={thisIdx}
-                        onClick={() => onChangeIdx(thisIdx)}
-                    />
-                ))}
-            </Stack>
+                <Stack
+                    sx={{
+                        height: '240px',
+
+                        border: '1px solid #546079',
+                        backgroundColor: '#333b4c',
+                        mt: '10px',
+                        padding: '4px 0',
+                        borderRadius: '4px',
+                    }}
+                >
+                    {LIST.map((one: string, thisIdx: number) => (
+                        <ListSelectBox
+                            title={one}
+                            nowIdx={idx}
+                            idx={thisIdx}
+                            onClick={() => onChangeIdx(thisIdx)}
+                        />
+                    ))}
+                </Stack>
+            </div>
         </Stack>
     )
 }

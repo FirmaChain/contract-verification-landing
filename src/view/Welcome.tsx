@@ -62,7 +62,7 @@ const Welcome = () => {
     }, [topIntersection, bottomIntersection])
 
     return (
-        <>
+        <Stack sx={{ width: '100%' }}>
             <Box ref={interTopRef} />
             <Stack direction="row" sx={{ ...BACKGROUND }}>
                 <BrowserView style={{ width: '100%' }}>
@@ -268,7 +268,7 @@ const Welcome = () => {
                         direction="column"
                         gap="20px"
                         alignItems="center"
-                        pb="44px"
+                        pb="24px"
                     >
                         <Typography
                             sx={{
@@ -305,13 +305,13 @@ const Welcome = () => {
                         <img
                             src={M_IMG_MAIN_VISUAL}
                             alt=""
-                            style={{ width: '283px' }}
+                            style={{ maxWidth: '320px', width: '100%' }}
                         />
                     </Stack>
                 </MobileView>
             </Stack>
             <Box ref={interBottomRef} />
-        </>
+        </Stack>
     )
 }
 

@@ -60,7 +60,7 @@ const Footer = () => {
                         </Typography>
                         <Divider
                             orientation="vertical"
-                            sx={{ height: '14px', borderColor: '#787a7c' }}
+                            sx={{ height: '12px', borderColor: '#787a7c' }}
                         />
                         <Typography
                             sx={{
@@ -77,9 +77,10 @@ const Footer = () => {
                     <Typography
                         sx={{
                             fontFamily: Lato,
-                            fontSize: '14px',
+                            fontSize: isBrowser ? '14px' : '13px',
+                            lineHeight: isBrowser ? 'unset' : 1.23,
                             color: '#8d9098',
-                            letterSpacing: '-0.14px',
+                            letterSpacing: isBrowser ? '-0.14px' : '-0.13px',
                         }}
                     >
                         ⓒ FirmaChain Pte. Ltd. {isBrowser ? '|' : <br />}

@@ -16,8 +16,8 @@ const Indicator = ({
                     className="buttonSelect"
                     onClick={() => setIdx(idx)}
                     sx={{
-                        width: nowIdx === idx ? '30px' : '10px',
-                        height: '10px',
+                        width: nowIdx === idx ? '30px' : '8px',
+                        height: '8px',
                         backgroundColor: nowIdx === idx ? '#0875f5' : '#cccccc',
                         borderRadius: '5px',
                     }}

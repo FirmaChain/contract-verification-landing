@@ -59,3 +59,5 @@ export const M_IMG_SERVICE_DONUE = 'images/service/img-m-service-donue.webp'
 
 // Common
 export const IC_CHECK_BLUE = 'images/global/ic-check-bl.webp'
+export const IC_OPEN_IN_NEW_GREY = 'images/global/ic-openinnew-gy.webp'
+export const IC_OPEN_IN_NEW_DARK_GREY = 'images/global/ic-openinnew-gy-2.webp'

@@ -12,14 +12,14 @@ const Contact = () => {
                         sx={{
                             maxWidth: '1200px',
                             width: '100%',
-                            pb: '80px',
+                            pb: '100px',
                             alignItems: 'center',
                         }}
                     >
                         <Stack
                             sx={{
                                 width: '100%',
-                                height: '320px',
+                                height: '310px',
                                 borderRadius: '16px',
                                 backgroundColor: '#ebf6ff',
                                 alignItems: 'center',
@@ -34,7 +34,7 @@ const Contact = () => {
                                     fontWeight: 'bold',
                                     lineHeight: 1.27,
                                     letterSpacing: '-1.1px',
-                                    pb: '24px',
+                                    pb: '20px',
                                 }}
                             >
                                 Get in Touch!
@@ -46,7 +46,7 @@ const Contact = () => {
                                     lineHeight: 1.22,
                                     letterSpacing: '-0.27px',
                                     color: '#4a4d51',
-                                    pb: '40px',
+                                    pb: '36px',
                                 }}
                             >
                                 If you have difficulty applying the API,

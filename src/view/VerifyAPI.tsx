@@ -105,7 +105,7 @@ const VerifyAPI = () => {
                         <Stack gap="50px">
                             <Stack alignItems="center">
                                 <SectionTitle sx={{ color: '#fff' }}>
-                                    about
+                                    VERIFY API
                                 </SectionTitle>
                                 <SectionHead
                                     sx={{
@@ -121,7 +121,7 @@ const VerifyAPI = () => {
                                         textAlign: 'center',
                                         color: 'transparent',
                                         background:
-                                            'linear-gradient(to left, #fff 0%, #0089ff 100%)',
+                                            'linear-gradient(to left, #fff 0%, #0769D9 100%)',
                                         '-webkit-background-clip': 'text',
                                         pb: '30px',
                                     }}

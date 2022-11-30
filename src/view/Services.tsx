@@ -69,45 +69,10 @@ const Services = () => {
                                 Meet the various services of FIRMA VERIFY.
                             </SectionHead>
                         </Stack>
-                        <Stack direction="row" alignItems="center" gap="10px">
-                            <ArrowCircleLeftOutlinedIcon
-                                sx={{ color: GRAYa0, fontSize: '28px' }}
-                            />
-                            <Stack direction="row" gap="5px">
-                                <Typography
-                                    sx={{
-                                        fontSize: '24px',
-                                        fontWeight: 'bold',
-                                        fontFamily: Lato,
-
-                                        letterSpacing: '-0.6px',
-                                        color: '#0875f5',
-                                    }}
-                                >
-                                    1
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontSize: '24px',
-                                        fontWeight: 'bold',
-                                        fontFamily: Lato,
-
-                                        letterSpacing: '-0.6px',
-                                        color: '#999999',
-                                    }}
-                                >
-                                    /1
-                                </Typography>
-                            </Stack>
-                            <ArrowCircleRightOutlinedIcon
-                                sx={{ color: GRAYa0, fontSize: '28px' }}
-                            />
-                        </Stack>
                     </Stack>
                     <Box sx={{ pb: '60px' }}>
                         <ServiceList />
                     </Box>
-                    <Indicator length={1} nowIdx={0} setIdx={() => {}} />
                 </Stack>
             </BrowserView>
             <MobileView>

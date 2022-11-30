@@ -38,7 +38,7 @@ body {
 }
 
 .hoverShow {
-    transition: opacity 0.5s;
+    transition: opacity 0.3s;
 }
 
 .horizentalScroll {
@@ -50,7 +50,7 @@ body {
 }
 
 .drawerOpen {
-    transition: height 0.5s, padding 0.7s;
+    transition: height 0.3s, padding 0.4s;
 }
 
 .allTransition {

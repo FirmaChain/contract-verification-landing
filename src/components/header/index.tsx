@@ -4,7 +4,7 @@ import {
     IMG_LOGO_WH,
     M_IMG_LOGO_BK,
 } from '../../constants/images'
-import { GotoButton, OutlinedBlueButton } from '../../styles'
+import { PCHeaderButton, OutlinedBlueButton } from '../../styles'
 import { BrowserView, MobileView } from 'react-device-detect'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -86,18 +86,18 @@ const Header = () => {
                             />
                         </Box>
                         <Stack direction="row" gap="90px">
-                            <GotoButton
+                            <PCHeaderButton
                                 menu={'verify'}
                                 sx={HEADER_TEXT_SX[headerState]}
                                 onClick={() =>
                                     window.open(VERIFY_SERVICE, '_blank')
                                 }
                             />
-                            <GotoButton
+                            <PCHeaderButton
                                 menu={'api docs'}
                                 sx={HEADER_TEXT_SX[headerState]}
                             />
-                            <GotoButton
+                            <PCHeaderButton
                                 menu={'ecosystem'}
                                 sx={HEADER_TEXT_SX[headerState]}
                             />
@@ -118,7 +118,6 @@ const Header = () => {
                     className="allTransition1s"
                     sx={{
                         position: 'fixed',
-
                         width: '100%',
                         borderBottom: mobileHeaderOpen ? '#fff' : 'unset',
                         display: 'flex',
@@ -186,7 +185,14 @@ const Header = () => {
                         <>
                             <ListItem
                                 key={text}
-                                sx={{ p: '20px 0', gap: '5px' }}
+                                sx={{
+                                    p: '20px 0',
+                                    gap: '5px',
+                                    color: '#343539',
+                                    ':hover': {
+                                        color: '#161718',
+                                    },
+                                }}
                             >
                                 <Typography
                                     sx={{
@@ -195,7 +201,6 @@ const Header = () => {
                                         fontWeight: 600,
                                         lineHeight: 1.25,
                                         letterSpacing: '-0.16px',
-                                        color: '#343539',
                                         textTransform: 'uppercase',
                                     }}
                                 >

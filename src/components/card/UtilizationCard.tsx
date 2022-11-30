@@ -1,5 +1,6 @@
 import { IKeyValue } from '../../interface'
 import { Divider, Stack, Typography } from '@mui/material'
+import { Metropolis } from '../../constants/theme'
 
 const UtilizationCard = ({ data }: IKeyValue) => {
     return (
@@ -11,7 +12,7 @@ const UtilizationCard = ({ data }: IKeyValue) => {
                     // Box
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
                     position: 'absolute',
                     borderRadius: '12px',
                     opacity: 0,
@@ -37,9 +38,9 @@ const UtilizationCard = ({ data }: IKeyValue) => {
                 >
                     <Typography
                         sx={{
+                            fontFamily: Metropolis,
                             fontSize: '28px',
-                            fontWeight: 'bold',
-
+                            fontWeight: 500,
                             letterSpacing: '-0.42px',
                         }}
                     >
@@ -61,8 +62,9 @@ const UtilizationCard = ({ data }: IKeyValue) => {
                         {data.data.list.map((one: string, idx: number) => (
                             <Typography
                                 sx={{
+                                    fontFamily: Metropolis,
                                     fontSize: '22px',
-                                    fontWeight: 500,
+                                    fontWeight: 400,
                                     lineHeight: 2,
                                     letterSpacing: '-0.33px',
                                 }}

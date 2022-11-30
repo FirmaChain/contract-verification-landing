@@ -3,9 +3,10 @@ import { Lato } from '../../constants/theme'
 import { IKeyValue } from '../../interface'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { useState } from 'react'
-import CheckIcon from '@mui/icons-material/Check'
+
 import CircleIcon from '@mui/icons-material/Circle'
 import useGlobalState from '../../hooks/useGlobalState'
+import { IC_CHECK_BLUE } from '../../constants/images'
 
 const NetworkSelect = ({
     idx,
@@ -25,7 +26,7 @@ const NetworkSelect = ({
             backgroundColor: 'rgba(255,255,255,0.2)',
         },
         {
-            backgroundColor: '#3078d6',
+            backgroundColor: '#3079D6', // '#3078d6',
         },
         {
             backgroundColor: '#397fda',
@@ -55,7 +56,7 @@ const NetworkSelect = ({
                     borderRadius: '15.5px',
                     userSelect: 'none',
                     cursor: 'pointer',
-                    padding: '0 14px',
+                    padding: '0 8px 0 14px',
 
                     ...BACKGROUND_SX[headerState],
 
@@ -74,61 +75,78 @@ const NetworkSelect = ({
                             color: '#fff',
                             fontSize: '20px',
                             transform: `rotate(${open ? 180 : 0}deg)`,
-                            transition: 'all 1s',
+                            transition: 'all 0.3s',
                         }}
                     />
                 </Stack>
             </Stack>
 
-            <Stack
+            <div
                 className="drawerOpen"
-                sx={{
+                style={{
                     width: '100%',
                     position: 'absolute',
                     top: '31px',
-
-                    height: open ? LIST.length * 36 : '0px',
+                    height: open ? `${LIST.length * 36 + 10 + 16}px` : '0px',
                     overflow: 'hidden',
-
-                    backgroundColor: '#fff',
-                    mt: '10px',
-                    padding: open ? '4px 0' : '0px',
-                    borderRadius: '4px',
                 }}
             >
-                {LIST.map((one: string, thisIdx: number) => (
-                    <Stack
-                        onClick={() => onChangeIdx(thisIdx)}
-                        direction="row"
-                        sx={{
-                            cursor: 'pointer',
-                            minHeight: '36px',
-                            alignItems: 'center',
-                            padding: '0 8px',
-                            '.arrow': {
-                                color: '#316ff5',
-                            },
-                            ':hover': {
-                                color: '#fff',
-                                backgroundColor: '#316ff5',
+                <Stack
+                    sx={{
+                        width: '100%',
+                        backgroundColor: '#fff',
+                        height: `${LIST.length * 36}px`,
+                        mt: '10px',
+                        padding: '8px 0',
+                        borderRadius: '4px',
+                    }}
+                >
+                    {LIST.map((one: string, thisIdx: number) => (
+                        <Stack
+                            onClick={() => onChangeIdx(thisIdx)}
+                            direction="row"
+                            gap="6px"
+                            sx={{
+                                cursor: 'pointer',
+                                height: '36px',
+                                alignItems: 'center',
+                                padding: '0 8px',
                                 '.arrow': {
-                                    color: '#fff',
+                                    color:
+                                        idx === thisIdx ? '#316ff5' : '#343539',
                                 },
-                            },
-                        }}
-                    >
-                        <Stack alignItems="center" sx={{ width: '20px' }}>
-                            {idx === thisIdx && (
-                                <CheckIcon
-                                    className="arrow"
-                                    sx={{ fontSize: '16px' }}
-                                />
-                            )}
+                                ':hover': {
+                                    color: '#fff',
+                                    backgroundColor: '#316ff5',
+                                    '.arrow': {
+                                        color: '#fff',
+                                    },
+                                },
+                            }}
+                        >
+                            <Stack alignItems="center" sx={{ width: '20px' }}>
+                                {idx === thisIdx && (
+                                    <img
+                                        src={IC_CHECK_BLUE}
+                                        alt=""
+                                        style={{ width: '12px' }}
+                                    />
+                                )}
+                            </Stack>
+                            <Typography
+                                sx={{
+                                    fontFamily: Lato,
+                                    fontSize: '14px',
+                                    fontWeight: 600,
+                                    letterSpacing: '-0.21px',
+                                }}
+                            >
+                                {one}
+                            </Typography>
                         </Stack>
-                        <Typography>{one}</Typography>
-                    </Stack>
-                ))}
-            </Stack>
+                    ))}
+                </Stack>
+            </div>
         </Stack>
     )
 }

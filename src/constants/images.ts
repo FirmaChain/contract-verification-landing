@@ -1,6 +1,6 @@
 // Header
-export const IMG_LOGO_WH = '/images/global/logo-verify-wh.png'
-export const IMG_LOGO_BK = '/images/global/logo-verify-bk.png'
+export const IMG_LOGO_WH = '/images/global/logo-verify-wh.webp'
+export const IMG_LOGO_BK = '/images/global/logo-verify-bk.webp'
 export const M_IMG_LOGO_WH = '/images/global/logo-m-verify-wh.webp'
 export const M_IMG_LOGO_BK = '/images/global/logo-m-verify-bk.webp'
 
@@ -56,3 +56,6 @@ export const M_IMG_SERVICE_VERIFY = 'images/service/img-m-service-verify.webp'
 export const M_IMG_SERVICE_FAUCET = 'images/service/img-m-service-faucet.webp'
 export const M_IMG_SERVICE_DOCS = 'images/service/img-m-service-docs.webp'
 export const M_IMG_SERVICE_DONUE = 'images/service/img-m-service-donue.webp'
+
+// Common
+export const IC_CHECK_BLUE = 'images/global/ic-check-bl.webp'

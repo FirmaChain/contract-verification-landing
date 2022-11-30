@@ -11,7 +11,7 @@ const Footer = () => {
             sx={{
                 width: '100%',
                 borderTop: isBrowser ? `1px solid ${GRAYef}` : 'none',
-                p: isBrowser ? '40px 30px 60px 30px' : '30px 16px 48px 16px',
+                p: isBrowser ? '40px 30px 50px 30px' : '30px 16px 48px 16px',
                 boxSizing: 'border-box',
             }}
         >
@@ -20,11 +20,15 @@ const Footer = () => {
                     direction={isBrowser ? 'row' : 'column'}
                     justifyContent={isBrowser ? 'space-between' : 'center'}
                     alignItems={isBrowser ? 'center' : 'flex-start'}
-                    sx={{ pb: isBrowser ? '40px' : '30px' }}
+                    sx={{ pb: '30px' }}
                     gap={isBrowser ? 0 : '22px'}
                 >
                     <Box>
-                        <img src={IMG_LOGO_BK} alt="" />
+                        <img
+                            src={IMG_LOGO_BK}
+                            alt=""
+                            style={{ width: '152px' }}
+                        />
                     </Box>
                     <Stack direction="row" gap={isBrowser ? '80px' : '20px'}>
                         <FooterGotoButton menu="verify" />

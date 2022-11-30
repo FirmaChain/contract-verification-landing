@@ -37,6 +37,12 @@
 
 @font-face {
     font-family: 'Metropolis';
+    font-weight: 200;
+    src: url(./constants/assets/Metroplis/Metropolis-ExtraLight.otf);
+}
+
+@font-face {
+    font-family: 'Metropolis';
     font-weight: 300;
     src: url(./constants/assets/Metroplis/Metropolis-Light.otf);
 }
@@ -49,6 +55,12 @@
 
 @font-face {
     font-family: 'Metropolis';
+    font-weight: 500;
+    src: url(./constants/assets/Metroplis/Metropolis-Medium.otf);
+}
+
+@font-face {
+    font-family: 'Metropolis';
     font-weight: 600;
     src: url(./constants/assets/Metroplis/Metropolis-SemiBold.otf);
 }
@@ -57,6 +69,12 @@
     font-family: 'Metropolis';
     font-weight: 700;
     src: url(./constants/assets/Metroplis/Metropolis-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    font-weight: 800;
+    src: url(./constants/assets/Metroplis/Metropolis-ExtraBold.otf);
 }
 
 @font-face {

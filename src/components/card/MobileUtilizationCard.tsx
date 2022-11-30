@@ -1,5 +1,6 @@
 import { IKeyValue } from '../../interface'
 import { Divider, Stack, Typography } from '@mui/material'
+import { Metropolis } from '../../constants/theme'
 
 const MobileUtilizationCard = ({ data }: IKeyValue) => {
     return (
@@ -36,8 +37,9 @@ const MobileUtilizationCard = ({ data }: IKeyValue) => {
                 >
                     <Typography
                         sx={{
+                            fontFamily: Metropolis,
                             fontSize: '24px',
-                            fontWeight: 'bold',
+                            fontWeight: 600,
                             lineHeight: 0.75,
                             letterSpacing: '-0.36px',
                             pb: '20px',
@@ -63,6 +65,7 @@ const MobileUtilizationCard = ({ data }: IKeyValue) => {
                             <Typography
                                 key={one}
                                 sx={{
+                                    fontFamily: Metropolis,
                                     fontSize: '18px',
                                     fontWeight: 500,
                                     lineHeight: 2.11,

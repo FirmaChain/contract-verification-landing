@@ -26,7 +26,7 @@ const About = () => {
                             alignItems: 'center',
                             p: '120px 0 190px 0',
                             maxWidth: '1200px',
-                            gap: '228px',
+                            gap: '238px',
                         }}
                     >
                         <Stack

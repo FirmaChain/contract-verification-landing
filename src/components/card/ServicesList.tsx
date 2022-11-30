@@ -28,7 +28,7 @@ const ServiceList = () => {
                     </Box>
                     <Typography
                         sx={{
-                            pb: '10px',
+                            pb: '8px',
                             fontSize: '24px',
                             fontFamily: Lato,
                             fontWeight: 'bold',
@@ -43,7 +43,7 @@ const ServiceList = () => {
                         sx={{
                             fontFamily: Lato,
                             fontSize: '18px',
-                            lineHeight: 1.67,
+                            lineHeight: 1,
                             letterSpacing: '-0.27px',
                             color: '#161718',
                         }}

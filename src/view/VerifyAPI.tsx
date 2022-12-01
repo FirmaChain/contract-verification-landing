@@ -144,7 +144,8 @@ const VerifyAPI = () => {
 
                                 <OutlinedWhiteButton title="API Docs" />
                             </Stack>
-                            <Stack gap="20px">
+                            <APICodeBox />
+                            {/* <Stack gap="20px">
                                 <Select idx={idx} setIdx={setIdx} />
 
                                 <Box>
@@ -154,7 +155,7 @@ const VerifyAPI = () => {
                                         style={{ width: '100%' }}
                                     />
                                 </Box>
-                            </Stack>
+                            </Stack> */}
                         </Stack>
                     </ContentOuterBox>
                 </Stack>

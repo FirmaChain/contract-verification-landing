@@ -46,6 +46,38 @@ export const M_IMG_VERIFICATION =
 export const IMG_VERIFY_API = 'images/verifyapi/img-api-code-box.webp'
 export const M_IMG_VERIFY_API = 'images/verifyapi/img-m-api-code-box.webp'
 
+// Code for PC
+export const IMG_API_CODE_CHECK_CONTRACT_OWNER =
+    'images/verifyapi/code/checkContractOwner.png'
+
+export const IMG_API_CODE_GET_CONTRACT_FILE_DATA =
+    'images/verifyapi/code/getContractFileData.png'
+
+export const IMG_API_CODE_GET_CONTRACT_LOG_DATA =
+    'images/verifyapi/code/getContractLogData.png'
+
+export const IMG_API_CODE_WRITE_CONTRACT_FILE_ON_CHAIN =
+    'images/verifyapi/code/writeContractFileOnChain.png'
+
+export const IMG_API_CODE_WRITE_CONTRACT_LOG_ON_CHAIN =
+    'images/verifyapi/code/writeContractLogOnChain.png'
+
+// Code for Mobile
+export const M_IMG_API_CODE_CHECK_CONTRACT_OWNER =
+    'images/verifyapi/code/m_checkContractOwner.png'
+
+export const M_IMG_API_CODE_GET_CONTRACT_FILE_DATA =
+    'images/verifyapi/code/m_getContractFileData.png'
+
+export const M_IMG_API_CODE_GET_CONTRACT_LOG_DATA =
+    'images/verifyapi/code/m_getContractLogData.png'
+
+export const M_IMG_API_CODE_WRITE_CONTRACT_FILE_ON_CHAIN =
+    'images/verifyapi/code/m_writeContractFileOnChain.png'
+
+export const M_IMG_API_CODE_WRITE_CONTRACT_LOG_ON_CHAIN =
+    'images/verifyapi/code/m_writeContractLogOnChain.png'
+
 // Service
 export const IMG_SERVICE_VERIFY = 'images/service/img-service-verify.webp'
 export const IMG_SERVICE_FAUCET = 'images/service/img-service-faucet.webp'

@@ -30,7 +30,7 @@ const Select = ({
     }
 
     return (
-        <Stack sx={{ width: 'calc(100%)', position: 'relative' }}>
+        <Stack sx={{ width: 'calc(100%)', position: 'relative', zIndex: 5 }}>
             <Stack
                 onClick={() => setOpen(!open)}
                 direction="row"

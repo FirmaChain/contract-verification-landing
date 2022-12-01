@@ -16,6 +16,9 @@ export const IC_WELCOME_FOLDER = '/images/welcome/img-main-folder.webp'
 export const IC_WELCOME_SHOPPING = '/images/welcome/img-main-shopping.webp'
 export const IC_WELCOME_BROWSER = '/images/welcome/img-main-browser.webp'
 
+export const IC_SMALL_CIRCLE_1 = '/images/welcome/img-main-round-1.webp'
+export const IC_SMALL_CIRCLE_2 = '/images/welcome/img-main-round-2.webp'
+
 // About
 export const IMG_ABOUT_1 = '/images/about/img-about-1.webp'
 export const IMG_ABOUT_2 = '/images/about/img-about-2.webp'

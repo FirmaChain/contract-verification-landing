@@ -87,7 +87,12 @@ const Header = () => {
                                 style={{ width: '171px' }}
                             />
                         </Box>
-                        <Stack direction="row" gap="90px">
+
+                        <Stack
+                            direction="row"
+                            gap="90px"
+                            sx={{ flex: 1, justifyContent: 'center' }}
+                        >
                             <PCHeaderButton
                                 menu={'verify'}
                                 sx={HEADER_TEXT_SX[headerState]}
@@ -108,7 +113,7 @@ const Header = () => {
                         <Stack
                             direction="column"
                             gap="10px"
-                            sx={{ position: 'relative' }}
+                            sx={{ position: 'relative', width: '140px' }}
                         >
                             <NetworkSelect idx={idx} setIdx={setIdx} />
                         </Stack>

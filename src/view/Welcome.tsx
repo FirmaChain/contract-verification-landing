@@ -121,7 +121,7 @@ const Welcome = () => {
                             </Stack>
 
                             <Stack justifyContent="flex-end">
-                                <Box
+                                <Stack
                                     sx={{
                                         position: 'relative',
                                         width: '565px',
@@ -131,18 +131,17 @@ const Welcome = () => {
                                     <img
                                         src={IMG_WELCOME_BIG_CIRCLE}
                                         alt=""
-                                        style={{ maxWidth: '565px' }}
+                                        style={{ width: '565px' }}
                                     />
 
                                     <Box
                                         sx={{
                                             position: 'absolute',
-
                                             top: '50%',
                                             left: '50%',
                                             transform: 'translate(-50%, -50%)',
-                                            width: '440px',
-                                            height: '440px',
+                                            width: '100%',
+                                            height: '100%',
                                         }}
                                     >
                                         <Stack
@@ -150,22 +149,34 @@ const Welcome = () => {
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
+                                                border: '1px solid red',
                                             }}
                                         >
                                             <div>
                                                 <img
                                                     src={IC_WELCOME_CONTRACT}
                                                     alt=""
-                                                    className="merryGoRound-reverse-20s"
+                                                    className="merryGoRound1-reverse-20s"
                                                     style={{
-                                                        maxWidth: '154px',
+                                                        maxWidth: '150px',
+                                                    }}
+                                                />
+                                                <img
+                                                    src={IC_WELCOME_CONTRACT}
+                                                    alt=""
+                                                    className="merryGoRound1-reverse-20s"
+                                                    style={{
+                                                        maxWidth: '150px',
+                                                        position: 'absolute',
+                                                        bottom: 0,
+                                                        right: 0,
                                                     }}
                                                 />
                                             </div>
                                         </Stack>
                                     </Box>
 
-                                    <Box
+                                    {/* <Box
                                         sx={{
                                             position: 'absolute',
 
@@ -177,7 +188,7 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound-reverse-15s"
+                                            className="merryGoRound1-reverse-15s"
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
@@ -187,15 +198,15 @@ const Welcome = () => {
                                             <img
                                                 src={IC_WELCOME_FOLDER}
                                                 alt=""
-                                                className="merryGoRound-15s"
+                                                className="merryGoRound1-15s"
                                                 style={{
                                                     maxWidth: '117px',
                                                 }}
                                             />
                                         </Stack>
-                                    </Box>
+                                    </Box> */}
 
-                                    <Box
+                                    {/* <Box
                                         sx={{
                                             position: 'absolute',
 
@@ -207,7 +218,7 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound-25s"
+                                            className="merryGoRound1-25s"
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
@@ -218,15 +229,16 @@ const Welcome = () => {
                                                 <img
                                                     src={IC_WELCOME_SHOPPING}
                                                     alt=""
-                                                    className="merryGoRound-reverse-25s"
+                                                    className="merryGoRound1-reverse-25s"
                                                     style={{
                                                         maxWidth: '117px',
                                                     }}
                                                 />
                                             </div>
                                         </Stack>
-                                    </Box>
-                                    <Box
+                                    </Box> */}
+
+                                    {/* <Box
                                         sx={{
                                             position: 'absolute',
 
@@ -238,7 +250,7 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound-25s"
+                                            className="merryGoRound1-25s"
                                             sx={{
                                                 width: '100%',
                                                 height: '100%',
@@ -250,15 +262,15 @@ const Welcome = () => {
                                                 <img
                                                     src={IC_WELCOME_BROWSER}
                                                     alt=""
-                                                    className="merryGoRound-reverse-25s"
+                                                    className="merryGoRound1-reverse-25s"
                                                     style={{
                                                         maxWidth: '131px',
                                                     }}
                                                 />
                                             </div>
                                         </Stack>
-                                    </Box>
-                                </Box>
+                                    </Box> */}
+                                </Stack>
                             </Stack>
                         </Stack>
                     </Stack>

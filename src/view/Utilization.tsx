@@ -141,10 +141,10 @@ const Utilization = () => {
                                 width: 278 * 3 + 30 * 2,
 
                                 overflow: 'hidden',
-                                gap: '30px',
+                                gap: '16px',
 
                                 transform: `translateX(${
-                                    16 - 278 * idx - 30 * idx
+                                    16 - 278 * idx - 16 * idx
                                 }px)`,
                             }}
                         >

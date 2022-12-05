@@ -20,7 +20,7 @@ import { VERIFY_SERVICE } from './links'
 
 export const UTILIZATION_DATA: IKeyValue[] = [
     {
-        width: isBrowser ? '200px' : '165px',
+        width: isBrowser ? '200px' : '147px',
         imgURL: isBrowser
             ? IMG_UTILIZATION_ECONTRACT
             : M_IMG_UTILIZATION_ECONTRACT,
@@ -35,7 +35,7 @@ export const UTILIZATION_DATA: IKeyValue[] = [
         },
     },
     {
-        width: isBrowser ? '212px' : '174px',
+        width: isBrowser ? '212px' : '155px',
         imgURL: isBrowser
             ? IMG_UTILIZATION_ECOMMERCE
             : M_IMG_UTILIZATION_ECOMMERCE,
@@ -50,7 +50,7 @@ export const UTILIZATION_DATA: IKeyValue[] = [
         },
     },
     {
-        width: isBrowser ? '270px' : '222px',
+        width: isBrowser ? '270px' : '197px',
         imgURL: isBrowser ? IMG_UTILIZATION_SERVICE : M_IMG_UTILIZATION_SERVICE,
         data: {
             title: 'Service',

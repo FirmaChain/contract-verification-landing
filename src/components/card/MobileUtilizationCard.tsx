@@ -13,9 +13,9 @@ const MobileUtilizationCard = ({ data }: IKeyValue) => {
                     // Box
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
                     position: 'absolute',
-                    borderRadius: '12px',
+                    borderRadius: '8px',
                     opacity: 0,
                     userSelect: 'none',
                     padding: '0 28px',
@@ -66,7 +66,7 @@ const MobileUtilizationCard = ({ data }: IKeyValue) => {
                                 key={one}
                                 sx={{
                                     fontFamily: Metropolis,
-                                    fontSize: '18px',
+                                    fontSize: '16px',
                                     fontWeight: 500,
                                     lineHeight: 2.11,
                                     letterSpacing: '-0.27px',

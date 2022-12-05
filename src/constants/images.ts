@@ -42,8 +42,7 @@ export const M_IMG_UTILIZATION_SERVICE =
 
 // Verification
 export const IMG_VERIFICATION = 'images/verification/img-verify-example.webp'
-export const M_IMG_VERIFICATION =
-    'images/verification/img-m-verify-example.webp'
+export const M_IMG_VERIFICATION = 'images/verification/img-m-verify-example.png'
 
 // VerifyAPI
 export const IMG_VERIFY_API = 'images/verifyapi/img-api-code-box.webp'
@@ -97,3 +96,4 @@ export const IC_CHECK_BLUE = 'images/global/ic-check-bl.webp'
 export const IC_CHECK_WHITE = 'images/global/ic-check-wh.webp'
 export const IC_OPEN_IN_NEW_GREY = 'images/global/ic-openinnew-gy.webp'
 export const IC_OPEN_IN_NEW_DARK_GREY = 'images/global/ic-openinnew-gy-2.webp'
+export const IC_CLOSE = 'images/global/ic-close.webp'

@@ -4,6 +4,7 @@ import {
     IMG_LOGO_WH,
     M_IMG_LOGO_BK,
     IC_OPEN_IN_NEW_DARK_GREY,
+    IC_CLOSE,
 } from '../../constants/images'
 import { PCHeaderButton, OutlinedBlueButton } from '../../styles'
 import { BrowserView, MobileView } from 'react-device-detect'
@@ -161,9 +162,10 @@ const Header = () => {
                             sx={{ height: '100%' }}
                         >
                             {mobileHeaderOpen ? (
-                                <CloseIcon
-                                    sx={{ fontSize: '32px', color: GRAY50 }}
-                                    onClick={() => setMobileHeaderOpen(false)}
+                                <img
+                                    src={IC_CLOSE}
+                                    alt=""
+                                    style={{ width: '16px' }}
                                 />
                             ) : (
                                 <MenuIcon

@@ -32,7 +32,7 @@ const Contact = () => {
                                     fontFamily: Metropolis,
                                     color: '#161718',
                                     fontWeight: 'bold',
-                                    lineHeight: 1.27,
+                                    lineHeight: 1,
                                     letterSpacing: '-1.1px',
                                     pb: '20px',
                                 }}

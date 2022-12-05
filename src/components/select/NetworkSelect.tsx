@@ -1,12 +1,13 @@
-import { Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 import { Lato } from '../../constants/theme'
 import { IKeyValue } from '../../interface'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { useState } from 'react'
+import CheckIcon from '@mui/icons-material/Check'
 
 import CircleIcon from '@mui/icons-material/Circle'
 import useGlobalState from '../../hooks/useGlobalState'
-import { IC_CHECK_BLUE } from '../../constants/images'
+import { IC_CHECK_BLUE, IC_CHECK_WHITE } from '../../constants/images'
 
 const NetworkSelect = ({
     idx,
@@ -81,12 +82,15 @@ const NetworkSelect = ({
                 </Stack>
             </Stack>
 
-            <div
+            <Box
                 className="drawerOpen"
                 style={{
                     width: '100%',
                     position: 'absolute',
                     top: '31px',
+                    padding: '0 10px 10px 10px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
                     height: open ? `${LIST.length * 36 + 10 + 16}px` : '0px',
                     overflow: 'hidden',
                 }}
@@ -99,6 +103,9 @@ const NetworkSelect = ({
                         mt: '10px',
                         padding: '8px 0',
                         borderRadius: '4px',
+                        boxShadow: open
+                            ? '0 1px 10px 0 rgba(0, 0, 0, 0.16)'
+                            : 'none',
                     }}
                 >
                     {LIST.map((one: string, thisIdx: number) => (
@@ -121,15 +128,30 @@ const NetworkSelect = ({
                                     '.arrow': {
                                         color: '#fff',
                                     },
+                                    '.imageHover': {
+                                        backgroundImage: `url(${IC_CHECK_WHITE})`,
+                                    },
                                 },
                             }}
                         >
-                            <Stack alignItems="center" sx={{ width: '20px' }}>
+                            <Stack
+                                alignItems="center"
+                                sx={{
+                                    width: '20px',
+                                    height: '20px',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                }}
+                            >
                                 {idx === thisIdx && (
-                                    <img
-                                        src={IC_CHECK_BLUE}
-                                        alt=""
-                                        style={{ width: '12px' }}
+                                    <Box
+                                        className="imageHover"
+                                        sx={{
+                                            width: '14px',
+                                            height: '14px',
+                                            backgroundImage: `url(${IC_CHECK_BLUE})`,
+                                            backgroundSize: 'cover',
+                                        }}
                                     />
                                 )}
                             </Stack>
@@ -146,7 +168,7 @@ const NetworkSelect = ({
                         </Stack>
                     ))}
                 </Stack>
-            </div>
+            </Box>
         </Stack>
     )
 }

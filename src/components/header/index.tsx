@@ -5,6 +5,8 @@ import {
     M_IMG_LOGO_BK,
     IC_OPEN_IN_NEW_DARK_GREY,
     IC_CLOSE,
+    IC_MENU_WHITE,
+    IC_MENU_BLACK,
 } from '../../constants/images'
 import { PCHeaderButton, OutlinedBlueButton } from '../../styles'
 import { BrowserView, MobileView } from 'react-device-detect'
@@ -162,35 +164,37 @@ const Header = () => {
                         <Stack
                             alignItems="center"
                             justifyContent="center"
-                            sx={{ height: '100%' }}
+                            sx={{
+                                width: '24px',
+                                height: '24px',
+                            }}
                             onClick={() =>
                                 setMobileHeaderOpen(!mobileHeaderOpen)
                             }
                         >
-                            {mobileHeaderOpen ? (
-                                <img
-                                    src={IC_CLOSE}
-                                    alt=""
-                                    style={{ width: '16px' }}
-                                />
-                            ) : (
-                                <MenuIcon
-                                    sx={{
-                                        fontSize: '32px',
-                                        color:
-                                            headerState > 0 ? '#000' : '#fff',
-                                    }}
-                                />
-                            )}
+                            {/* IC_MENU_WHITE */}
+                            <img
+                                src={
+                                    mobileHeaderOpen
+                                        ? IC_CLOSE
+                                        : headerState === 0
+                                        ? IC_MENU_WHITE
+                                        : IC_MENU_BLACK
+                                }
+                                alt=""
+                                style={{
+                                    width: mobileHeaderOpen ? '16px' : '24px',
+                                }}
+                            />
                         </Stack>
                     </Stack>
                     <Box
                         className="drawerOpen"
                         sx={{
                             position: 'absolute',
-                            top: '58px',
+                            top: '57px',
                             width: '100%',
-                            height: mobileHeaderOpen ? '400px' : '0',
+                            height: mobileHeaderOpen ? '252px' : '0',
                             overflow: 'hidden',
                         }}
                     >

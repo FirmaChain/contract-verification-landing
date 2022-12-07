@@ -142,30 +142,36 @@ const Welcome = () => {
                                         }}
                                     />
 
-                                    {/* <Box
+                                    <Box
                                         sx={{
                                             position: 'absolute',
                                             top: '50%',
                                             left: '50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            width: '510px',
-                                            height: '510px',
+                                            transform:
+                                                'translate(-50%, -50.5%)',
+                                            width: '430px',
+                                            height: '430px',
                                             zInded: 3,
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound-30s"
+                                            className="merryGoRound-20s"
                                             sx={{
-                                                width: '500px',
-                                                height: '510px',
+                                                width: '430px',
+                                                height: '430px',
+                                                alignItems: 'flex-end',
+                                                justifyContent: 'flex-end',
                                             }}
                                         >
                                             <img
                                                 src={IC_WELCOME_BROWSER}
                                                 alt=""
-                                                className="merryGoRound-reverse-30s"
+                                                className="merryGoRound-reverse-20s"
                                                 style={{
-                                                    maxWidth: '131px',
+                                                    maxWidth: '86px',
+                                                    boxShadow:
+                                                        '0 3px 6px 0 rgba(0, 0, 0, 0.16)',
+                                                    borderRadius: '50%',
                                                 }}
                                             />
                                         </Stack>
@@ -176,16 +182,17 @@ const Welcome = () => {
                                             position: 'absolute',
                                             top: '50%',
                                             left: '50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            width: '420px',
-                                            height: '420px',
+                                            transform:
+                                                'translate(-50%, -50.5%)',
+                                            width: '360px',
+                                            height: '360px',
                                         }}
                                     >
                                         <Stack
                                             className="merryGoRound-reverse-20s"
                                             sx={{
-                                                width: '420px',
-                                                height: '420px',
+                                                width: '360px',
+                                                height: '360px',
                                             }}
                                         >
                                             <img
@@ -193,7 +200,10 @@ const Welcome = () => {
                                                 alt=""
                                                 className="merryGoRound-20s"
                                                 style={{
-                                                    maxWidth: '154px',
+                                                    maxWidth: '94px',
+                                                    boxShadow:
+                                                        '0 3px 6px 0 rgba(0, 0, 0, 0.16)',
+                                                    borderRadius: '50%',
                                                 }}
                                             />
                                         </Stack>
@@ -204,16 +214,18 @@ const Welcome = () => {
                                             position: 'absolute',
                                             top: '50%',
                                             left: '50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            width: '300px',
-                                            height: '300px',
+                                            transform:
+                                                'translate(-50%, -50.5%)',
+                                            width: '325px',
+                                            height: '325px',
                                         }}
                                     >
                                         <Stack
                                             className="merryGoRound-15s"
                                             sx={{
-                                                width: '300px',
-                                                height: '300px',
+                                                width: '325px',
+                                                height: '325px',
+                                                alignItems: 'flex-end',
                                             }}
                                         >
                                             <img
@@ -221,7 +233,10 @@ const Welcome = () => {
                                                 alt=""
                                                 className="merryGoRound-reverse-15s"
                                                 style={{
-                                                    maxWidth: '117px',
+                                                    maxWidth: '57px',
+                                                    boxShadow:
+                                                        '0 3px 6px 0 rgba(0, 0, 0, 0.16)',
+                                                    borderRadius: '50%',
                                                 }}
                                             />
                                         </Stack>
@@ -232,17 +247,19 @@ const Welcome = () => {
                                             position: 'absolute',
                                             top: '50%',
                                             left: '50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            width: '470px',
-                                            height: '470px',
+                                            transform:
+                                                'translate(-50%, -50.5%)',
+                                            width: '415px',
+                                            height: '415px',
                                             zIndex: 3,
                                         }}
                                     >
                                         <Stack
                                             className="merryGoRound-20s"
                                             sx={{
-                                                width: '470px',
-                                                height: '470px',
+                                                width: '415px',
+                                                height: '415px',
+                                                justifyContent: 'flex-end',
                                             }}
                                         >
                                             <img
@@ -250,7 +267,10 @@ const Welcome = () => {
                                                 alt=""
                                                 className="merryGoRound-reverse-20s"
                                                 style={{
-                                                    maxWidth: '117px',
+                                                    maxWidth: '72px',
+                                                    boxShadow:
+                                                        '0 3px 6px 0 rgba(0, 0, 0, 0.16)',
+                                                    borderRadius: '50%',
                                                 }}
                                             />
                                         </Stack>
@@ -261,20 +281,23 @@ const Welcome = () => {
                                             position: 'absolute',
                                             top: '50%',
                                             left: '50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            width: '220px',
-                                            height: '220px',
+                                            transform:
+                                                'translate(-50%, -50.5%)',
+                                            width: '180px',
+                                            height: '245px',
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound-25s"
+                                            className="merryGoRound-15s"
                                             sx={{
-                                                width: '220px',
-                                                height: '220px',
+                                                width: '180px',
+                                                height: '245px',
+                                                alignItems: 'flex-end',
+                                                justifyContent: 'flex-end',
                                             }}
                                         >
                                             <Box
-                                                className="merryGoRound-reverse-25s"
+                                                className="merryGoRound-reverse-15s"
                                                 sx={{
                                                     width: '38px',
                                                     height: '38px',
@@ -293,16 +316,18 @@ const Welcome = () => {
                                             position: 'absolute',
                                             top: '50%',
                                             left: '50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            width: '383px',
-                                            height: '383px',
+                                            transform:
+                                                'translate(-50%, -50.5%)',
+                                            width: '445px',
+                                            height: '270px',
+                                            zIndex: 5,
                                         }}
                                     >
                                         <Stack
                                             className="merryGoRound-reverse-15s"
                                             sx={{
-                                                width: '383px',
-                                                height: '383px',
+                                                width: '445px',
+                                                height: '270px',
                                             }}
                                         >
                                             <Box
@@ -318,7 +343,7 @@ const Welcome = () => {
                                                 }}
                                             />
                                         </Stack>
-                                    </Box> */}
+                                    </Box>
                                 </Stack>
                             </Stack>
                         </Stack>

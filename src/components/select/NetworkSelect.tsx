@@ -3,7 +3,6 @@ import { Lato } from '../../constants/theme'
 import { IKeyValue } from '../../interface'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { useState } from 'react'
-import CheckIcon from '@mui/icons-material/Check'
 
 import CircleIcon from '@mui/icons-material/Circle'
 import useGlobalState from '../../hooks/useGlobalState'

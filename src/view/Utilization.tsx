@@ -64,27 +64,26 @@ const Utilization = () => {
                     </SectionTitle>
                     <SectionHead
                         sx={{
-                            width: '700px',
+                            width: '730px',
                             textAlign: 'center',
-                            pb: '38px',
+                            pb: '40px',
                         }}
                     >
-                        FIRMA VERIFY can be used in various fields.
+                        FIRMA VERIFY authenticates a wide range of data.
                     </SectionHead>
                     <SectionDesc
                         sx={{
-                            width: '530px',
+                            width: '606px',
                             color: '#4a4d51',
                             textAlign: 'center',
                             pb: '100px',
                         }}
                     >
-                        It can be introduced into various fields such as
-                        contracts, transactions, and records made online or
-                        offline.
-                        <br />
-                        FIRMA VERIFY can be applied wherever higher confidence
-                        is needed.
+                        Apply FIRMA VERIFY to authenticate a wide range of data
+                        including online/offline transactions data, contract
+                        data and archived data.
+                        <br /> Apply FIRMA VERIFY in any area that requires a
+                        high level of security and trust.
                     </SectionDesc>
                     <Stack
                         direction="row"

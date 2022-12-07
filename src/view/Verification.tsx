@@ -26,7 +26,7 @@ const Verification = () => {
                             width: '100%',
                             alignItems: 'flex-end',
                             justifyContent: 'space-between',
-                            pb: '80px',
+                            pb: '84px',
                         }}
                     >
                         <Stack direction="column" justifyContent="flex-start">
@@ -35,24 +35,25 @@ const Verification = () => {
                             </SectionTitle>
                             <SectionHead
                                 sx={{
-                                    width: '773px',
+                                    maxWidth: '580px',
+                                    width: '100%',
                                 }}
                             >
-                                Verification service completed with FIRMA
-                                VERIFY.
+                                Complete Your Service with FIRMA VERIFY.
                             </SectionHead>
                         </Stack>
                         <SectionDesc
                             sx={{
-                                width: '357px',
+                                maxWidth: '383px',
+                                width: '100%',
                                 color: '#4a4d51',
                                 textAlign: 'right',
                             }}
                         >
-                            With FIRMA VERIFY, reliable information <br />
-                            can be recorded and verified by anyone.
-                            <br /> (The scope of support will continue to
-                            expand.)
+                            You can record trusted data and let anyone verify
+                            the recorded data using FIRMA VERIFY.
+                            <br /> (We will continue to expand our range of
+                            support.)
                         </SectionDesc>
                     </Stack>
                     <Box>

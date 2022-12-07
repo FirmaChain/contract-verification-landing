@@ -24,7 +24,7 @@ const About = () => {
                         sx={{
                             width: '100%',
                             alignItems: 'center',
-                            p: '120px 0 190px 0',
+                            p: '120px 0 166px 0',
                             maxWidth: '1200px',
                             gap: '238px',
                         }}
@@ -44,11 +44,14 @@ const About = () => {
                                 <SectionHead
                                     sx={{
                                         color: '#161718',
-                                        width: '479px',
+                                        maxWidth: '331px',
+                                        width: '100%',
                                         pb: '40px',
                                     }}
                                 >
-                                    Trusted verification service of integrity.
+                                    Build
+                                    <br /> a higher
+                                    <br /> level of trust.
                                 </SectionHead>
                                 <SectionDesc
                                     sx={{
@@ -57,10 +60,11 @@ const About = () => {
                                         color: '#4a4d51',
                                     }}
                                 >
-                                    Due to the nature of the blockchain-based
-                                    data, everything is transparent and cannot
-                                    be modified. Ensure integrity with reliable
-                                    verification services.
+                                    All recorded data on the blockchain network
+                                    are transparently disclosed and cannot be
+                                    modified. Using our verification service,
+                                    <br />
+                                    build your own impeccable service.
                                 </SectionDesc>
 
                                 <OutlinedBlueButton
@@ -107,33 +111,44 @@ const About = () => {
                                 </SectionTitle>
                                 <SectionHead
                                     sx={{
-                                        maxWidth: '541px',
+                                        maxWidth: '417px',
                                         width: '100%',
                                         pb: '40px',
                                         textAlign: 'right',
                                         color: '#161718',
                                     }}
                                 >
-                                    Provides an
+                                    Open API
                                     <br />
-                                    open API
+                                    for Easy
                                     <br />
-                                    for easy deployment.
+                                    Implementation.
                                 </SectionHead>
                                 <SectionDesc
                                     sx={{
-                                        width: '485px',
+                                        width: '465px',
+                                        textAlign: 'right',
+                                        color: '#4a4d51',
+                                    }}
+                                >
+                                    Using FirmaChain’s open API, you can easily
+                                    integrate
+                                    <br /> the features that meet the
+                                    requirements of your company.
+                                </SectionDesc>
+                                <SectionDesc
+                                    sx={{
+                                        width: '465px',
                                         pb: '40px',
                                         textAlign: 'right',
                                         color: '#4a4d51',
                                     }}
                                 >
-                                    It is an open API provided by the Firma
-                                    chain, and only the functions required by
-                                    the enterprise can be used in conjunction.
-                                    It can be introduced even if you are not a
-                                    blockchain developer, from creating contract
-                                    files to inquiring.
+                                    From creating a contract file to the
+                                    authentication of recorded data, you do not
+                                    have to be a blockchain specialist to
+                                    integrate the features that FirmaChain’s
+                                    open API provides.
                                 </SectionDesc>
 
                                 <OutlinedBlueButton title="API Docs" />

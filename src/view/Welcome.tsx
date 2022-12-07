@@ -89,25 +89,27 @@ const Welcome = () => {
                             >
                                 <Typography
                                     sx={{
-                                        width: '566px',
+                                        maxWidth: '464px',
+                                        width: '100%',
                                         fontFamily: Metropolis,
                                         fontSize: '78px',
-                                        fontWeight: 700,
-                                        lineHeight: '1.03',
-                                        letterSpacing: '-1.85px',
+                                        fontWeight: 'bold',
+                                        lineHeight: '1',
+                                        letterSpacing: '-1.95px',
                                         color: '#fff',
                                     }}
                                 >
-                                    Trust,
+                                    Verify
                                     <br />
-                                    verify
+                                    Your Trust
                                     <br />
-                                    more than that.
+                                    and Beyond.
                                 </Typography>
 
                                 <Typography
                                     sx={{
-                                        width: '371px',
+                                        width: '100%',
+                                        maxWidth: '360px',
                                         fontFamily: Lato,
                                         fontSize: '20px',
                                         lineHeight: '1.4',
@@ -115,9 +117,9 @@ const Welcome = () => {
                                         color: '#fff',
                                     }}
                                 >
-                                    FIRMA VERIFY supports verification of all
-                                    data recorded on FIRMACHAIN based on
-                                    FIRMACHAIN’s high reliability.
+                                    Based on FirmaChain’s high credibility,
+                                    FIRMA VERIFY authenticates all recorded data
+                                    on FIRMACHAIN.
                                 </Typography>
                             </Stack>
 
@@ -125,15 +127,49 @@ const Welcome = () => {
                                 <Stack
                                     sx={{
                                         position: 'relative',
-                                        width: '565px',
-                                        height: '565px',
+                                        maxWidth: '545px',
+                                        maxHeight: '545px',
+                                        width: '100%',
+                                        height: '100%',
                                     }}
                                 >
                                     <img
                                         src={IMG_WELCOME_BIG_CIRCLE}
                                         alt=""
-                                        style={{ width: '565px' }}
+                                        style={{
+                                            maxWidth: '545px',
+                                            width: '100%',
+                                        }}
                                     />
+
+                                    {/* <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            top: '50%',
+                                            left: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            width: '510px',
+                                            height: '510px',
+                                            zInded: 3,
+                                        }}
+                                    >
+                                        <Stack
+                                            className="merryGoRound-30s"
+                                            sx={{
+                                                width: '500px',
+                                                height: '510px',
+                                            }}
+                                        >
+                                            <img
+                                                src={IC_WELCOME_BROWSER}
+                                                alt=""
+                                                className="merryGoRound-reverse-30s"
+                                                style={{
+                                                    maxWidth: '131px',
+                                                }}
+                                            />
+                                        </Stack>
+                                    </Box>
 
                                     <Box
                                         sx={{
@@ -141,46 +177,31 @@ const Welcome = () => {
                                             top: '50%',
                                             left: '50%',
                                             transform: 'translate(-50%, -50%)',
-                                            width: '100%',
-                                            height: '100%',
+                                            width: '420px',
+                                            height: '420px',
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound-20s"
+                                            className="merryGoRound-reverse-20s"
                                             sx={{
-                                                width: '100%',
-                                                height: '100%',
-                                                border: '1px solid red',
+                                                width: '420px',
+                                                height: '420px',
                                             }}
                                         >
-                                            <div>
-                                                <img
-                                                    src={IC_WELCOME_CONTRACT}
-                                                    alt=""
-                                                    className="merryGoRound1-reverse-20s"
-                                                    style={{
-                                                        maxWidth: '150px',
-                                                    }}
-                                                />
-                                                <img
-                                                    src={IC_WELCOME_CONTRACT}
-                                                    alt=""
-                                                    className="merryGoRound1-reverse-20s"
-                                                    style={{
-                                                        maxWidth: '150px',
-                                                        position: 'absolute',
-                                                        bottom: 0,
-                                                        right: 0,
-                                                    }}
-                                                />
-                                            </div>
+                                            <img
+                                                src={IC_WELCOME_CONTRACT}
+                                                alt=""
+                                                className="merryGoRound-20s"
+                                                style={{
+                                                    maxWidth: '154px',
+                                                }}
+                                            />
                                         </Stack>
                                     </Box>
 
-                                    {/* <Box
+                                    <Box
                                         sx={{
                                             position: 'absolute',
-
                                             top: '50%',
                                             left: '50%',
                                             transform: 'translate(-50%, -50%)',
@@ -189,86 +210,113 @@ const Welcome = () => {
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound1-reverse-15s"
+                                            className="merryGoRound-15s"
                                             sx={{
-                                                width: '100%',
-                                                height: '100%',
-                                                alignItems: 'flex-end',
+                                                width: '300px',
+                                                height: '300px',
                                             }}
                                         >
                                             <img
                                                 src={IC_WELCOME_FOLDER}
                                                 alt=""
-                                                className="merryGoRound1-15s"
+                                                className="merryGoRound-reverse-15s"
                                                 style={{
                                                     maxWidth: '117px',
                                                 }}
                                             />
                                         </Stack>
-                                    </Box> */}
+                                    </Box>
 
-                                    {/* <Box
+                                    <Box
                                         sx={{
                                             position: 'absolute',
-
                                             top: '50%',
                                             left: '50%',
                                             transform: 'translate(-50%, -50%)',
-                                            width: '480px',
-                                            height: '480px',
+                                            width: '470px',
+                                            height: '470px',
+                                            zIndex: 3,
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound1-25s"
+                                            className="merryGoRound-20s"
                                             sx={{
-                                                width: '100%',
-                                                height: '100%',
-                                                justifyContent: 'flex-end',
+                                                width: '470px',
+                                                height: '470px',
                                             }}
                                         >
-                                            <div>
-                                                <img
-                                                    src={IC_WELCOME_SHOPPING}
-                                                    alt=""
-                                                    className="merryGoRound1-reverse-25s"
-                                                    style={{
-                                                        maxWidth: '117px',
-                                                    }}
-                                                />
-                                            </div>
+                                            <img
+                                                src={IC_WELCOME_SHOPPING}
+                                                alt=""
+                                                className="merryGoRound-reverse-20s"
+                                                style={{
+                                                    maxWidth: '117px',
+                                                }}
+                                            />
                                         </Stack>
-                                    </Box> */}
+                                    </Box>
 
-                                    {/* <Box
+                                    <Box
                                         sx={{
                                             position: 'absolute',
-
                                             top: '50%',
                                             left: '50%',
                                             transform: 'translate(-50%, -50%)',
-                                            width: '500px',
-                                            height: '500px',
+                                            width: '220px',
+                                            height: '220px',
                                         }}
                                     >
                                         <Stack
-                                            className="merryGoRound1-25s"
+                                            className="merryGoRound-25s"
                                             sx={{
-                                                width: '100%',
-                                                height: '100%',
-                                                justifyContent: 'flex-end',
-                                                alignItems: 'flex-end',
+                                                width: '220px',
+                                                height: '220px',
                                             }}
                                         >
-                                            <div>
-                                                <img
-                                                    src={IC_WELCOME_BROWSER}
-                                                    alt=""
-                                                    className="merryGoRound1-reverse-25s"
-                                                    style={{
-                                                        maxWidth: '131px',
-                                                    }}
-                                                />
-                                            </div>
+                                            <Box
+                                                className="merryGoRound-reverse-25s"
+                                                sx={{
+                                                    width: '38px',
+                                                    height: '38px',
+                                                    borderRadius: '50%',
+                                                    boxShadow:
+                                                        '0 3px 20px 0 rgba(0, 8, 36, 0.15)',
+                                                    backgroundImage:
+                                                        'linear-gradient(141deg, #e2f4ff 14%, #57b5e2 86%)',
+                                                }}
+                                            />
+                                        </Stack>
+                                    </Box>
+
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            top: '50%',
+                                            left: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            width: '383px',
+                                            height: '383px',
+                                        }}
+                                    >
+                                        <Stack
+                                            className="merryGoRound-reverse-15s"
+                                            sx={{
+                                                width: '383px',
+                                                height: '383px',
+                                            }}
+                                        >
+                                            <Box
+                                                className="merryGoRound-15s"
+                                                sx={{
+                                                    width: '24px',
+                                                    height: '24px',
+                                                    borderRadius: '50%',
+                                                    boxShadow:
+                                                        '0 3px 20px 0 rgba(0, 8, 36, 0.15)',
+                                                    backgroundImage:
+                                                        'linear-gradient(141deg, #e2f4ff 14%, #57b5e2 86%)',
+                                                }}
+                                            />
                                         </Stack>
                                     </Box> */}
                                 </Stack>

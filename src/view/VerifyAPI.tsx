@@ -38,7 +38,7 @@ const VerifyAPI = () => {
                                 direction="column"
                                 sx={{
                                     alignItems: 'center',
-                                    gap: '100px',
+                                    gap: '78px',
                                 }}
                             >
                                 <Stack alignItems="center">
@@ -48,13 +48,14 @@ const VerifyAPI = () => {
                                     <Box sx={{ pb: '40px' }}>
                                         <SectionHead
                                             sx={{
+                                                fontSize: '58px !important',
                                                 textAlign: 'center',
                                                 color: '#fff',
                                                 letterSpacing:
                                                     '-1.45px !important',
                                             }}
                                         >
-                                            Effective and convenient
+                                            Convenient and Efficient
                                         </SectionHead>
                                         <SectionHead
                                             sx={{
@@ -77,11 +78,13 @@ const VerifyAPI = () => {
                                             color: '#d0d5e0',
                                         }}
                                     >
-                                        It supports various functions such as
-                                        contract recording & inquiry, extraction
-                                        of HASH values, and status recording,
-                                        and provides a guide for easy
-                                        application.
+                                        We support a wide range of features
+                                        including the recording and searching of
+                                        contract data, extraction of HASH values
+                                        and contract status recording.
+                                        <br /> To make your implementation
+                                        process seamless, we also provide a
+                                        detailed user guide.
                                     </SectionDesc>
                                     <OutlinedWhiteButton title="API Docs" />
                                 </Stack>

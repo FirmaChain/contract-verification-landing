@@ -24,13 +24,13 @@ const NetworkSelect = ({
     const BACKGROUND_SX = [
         {
             backdropFilter: 'blur(30px)',
-            backgroundColor: 'rgba(255,255,255,0.2)',
+            backgroundColor: '#3079D6', //'rgba(48, 121, 214, 0.2)',
         },
         {
             backgroundColor: '#3079D6', // '#3078d6',
         },
         {
-            backgroundColor: '#397fda',
+            backgroundColor: '#3079D6',
         },
     ]
 
@@ -85,7 +85,7 @@ const NetworkSelect = ({
             <Box
                 className="drawerOpen"
                 style={{
-                    width: '100%',
+                    width: '153px',
                     position: 'absolute',
                     top: '31px',
                     padding: '0 10px 10px 10px',
@@ -99,7 +99,7 @@ const NetworkSelect = ({
                     sx={{
                         width: '100%',
                         backgroundColor: '#fff',
-                        height: `${LIST.length * 36}px`,
+                        height: `${LIST.length * 36 + 10}px`,
                         mt: '10px',
                         padding: '8px 0',
                         borderRadius: '4px',

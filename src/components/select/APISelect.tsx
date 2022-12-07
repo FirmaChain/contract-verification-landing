@@ -61,7 +61,7 @@ const Select = ({
                 <KeyboardArrowDownIcon
                     sx={{
                         transform: `rotate(${open ? 180 : 0}deg)`,
-                        transition: 'all 1s',
+                        transition: 'all 0.3s',
                     }}
                 />
             </Stack>

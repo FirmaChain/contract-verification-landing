@@ -76,7 +76,13 @@ const Services = () => {
                 </Stack>
             </BrowserView>
             <MobileView>
-                <Stack sx={{ width: '100%', p: '70px 0 80px 0' }}>
+                <Stack
+                    sx={{
+                        width: '100%',
+                        p: '70px 0 80px 0',
+                        alignItems: 'center',
+                    }}
+                >
                     <SectionTitle
                         sx={{
                             textAlign: 'center',
@@ -90,13 +96,13 @@ const Services = () => {
                             pb: '50px',
                             textAlign: 'center',
                             color: '#161718',
+                            maxWidth: '302px',
+                            width: '100%',
                         }}
                     >
-                        Meet the various
-                        <br />
-                        services
-                        <br />
-                        of FIRMA VERIFY.
+                        Meet other services
+                        <br /> that amplifies the usability
+                        <br /> of FIRMA VERIFY.
                     </SectionHead>
                     <div
                         onMouseDown={handleDragStart}
@@ -120,7 +126,7 @@ const Services = () => {
                                 gap: '16px',
 
                                 transform: `translateX(${
-                                    69 - 278 * idx - 16 * idx
+                                    16 - 278 * idx - 16 * idx
                                 }px)`,
                             }}
                         >

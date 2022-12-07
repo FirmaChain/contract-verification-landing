@@ -21,10 +21,11 @@ const BACKGROUND = {
         ? `url(${PC_IMG_WELCOME_BACKGROUND})`
         : `url(${M_IMG_WELCOME_BACKGROUND})`,
     backgroundRepeat: 'no-repeat',
-    height: isBrowser ? '720px' : '635px',
+    minHeight: isBrowser ? '720px' : '635px',
+    height: '100%',
     backgroundSize: 'cover',
     boxSizing: 'border-box',
-    padding: '0 30px',
+    padding: isBrowser ? '0 30px' : '0',
 }
 
 const Welcome = () => {
@@ -280,32 +281,33 @@ const Welcome = () => {
                         direction="column"
                         gap="20px"
                         alignItems="center"
-                        pb="24px"
+                        sx={{ boxSizing: 'border-box', p: '0 30px' }}
                     >
                         <Typography
                             sx={{
                                 fontFamily: Metropolis,
-                                fontSize: '40px',
+                                fontSize: '37px',
                                 fontWeight: 'bold',
-                                lineHeight: 1.1,
-                                letterSpacing: '-1px',
+                                lineHeight: 1.08,
+                                letterSpacing: '-0.93px',
                                 color: '#fff',
                                 textAlign: 'center',
-                                pt: '98px',
+                                pt: '104px',
                             }}
                         >
-                            Trust, verify
-                            <br /> more than that.
+                            Verify Your Trust and Beyond.
                         </Typography>
                         <Typography
                             sx={{
-                                width: '278px',
+                                maxWidth: '278px',
+                                width: '100%',
                                 fontFamily: Lato,
                                 fontSize: '16px',
                                 lineHeight: 1.25,
                                 letterSpacing: '-0.24px',
                                 textAlign: 'center',
                                 color: GRAYef,
+                                pb: '8px',
                             }}
                         >
                             FIRMA VERIFY supports verification of all data
@@ -313,11 +315,23 @@ const Welcome = () => {
                             reliability.
                         </Typography>
                     </Stack>
-                    <Stack alignItems="center">
+                    <Stack
+                        alignItems="center"
+                        sx={{
+                            position: 'relative',
+                            width: '100%',
+                            height: 'calc(100vw - 50px)',
+                        }}
+                    >
                         <img
                             src={M_IMG_MAIN_VISUAL}
                             alt=""
-                            style={{ maxWidth: '320px', width: '100%' }}
+                            style={{
+                                maxWidth: 'calc(100% - 30px)',
+                                width: '100%',
+                                position: 'absolute',
+                                top: '-2px',
+                            }}
                         />
                     </Stack>
                 </MobileView>

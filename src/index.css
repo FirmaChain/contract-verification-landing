@@ -88,3 +88,7 @@ body {
 .merryGoRound-reverse-30s {
     animation: reverse-rotate 30s linear infinite;
 }
+
+* {
+    box-sizing: border-box;
+}

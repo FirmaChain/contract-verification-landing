@@ -2,9 +2,10 @@ import { Box } from '@mui/material'
 import useGlobalState from '../../hooks/useGlobalState'
 
 const MobileGNBShade = () => {
-    const { mobileHeaderOpen } = useGlobalState()
+    const { mobileHeaderOpen, setMobileHeaderOpen } = useGlobalState()
     return (
         <Box
+            onClick={() => setMobileHeaderOpen(false)}
             sx={{
                 position: 'fixed',
                 width: '100vw',

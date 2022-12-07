@@ -101,27 +101,29 @@ const Utilization = () => {
             </BrowserView>
             <MobileView>
                 <Stack alignItems="center" p="60px 0 70px 0">
-                    <SectionTitle sx={{ color: '#0875f5' }}>
-                        utilization field
-                    </SectionTitle>
-                    <SectionHead sx={{ textAlign: 'center', pb: '24px' }}>
-                        FIRMA VERIFY
-                        <br /> can be used <br />
-                        in various fields.
-                    </SectionHead>
-                    <SectionDesc
-                        sx={{
-                            color: '#4a4d51',
-                            textAlign: 'center',
-                            pb: '50px',
-                        }}
-                    >
-                        It can be introduced into various fields
-                        <br /> such as contracts, transactions, and <br />
-                        records made online or offline. <br />
-                        FIRMA VERIFY can be applied wherever <br />
-                        higher confidence is needed.
-                    </SectionDesc>
+                    <Stack alignItems="center" p="0 16px">
+                        <SectionTitle sx={{ color: '#0875f5' }}>
+                            utilization field
+                        </SectionTitle>
+                        <SectionHead sx={{ textAlign: 'center', pb: '24px' }}>
+                            FIRMA VERIFY authenticates
+                            <br /> a wide range of data.
+                        </SectionHead>
+                        <SectionDesc
+                            sx={{
+                                color: '#4a4d51',
+                                textAlign: 'center',
+                                pb: '60px',
+                            }}
+                        >
+                            Apply FIRMA VERIFY to authenticate
+                            <br /> a wide range of data including
+                            <br /> online/offline transactions data,
+                            <br /> contract data and archived data.
+                            <br /> Apply FIRMA VERIFY in any area that
+                            <br /> requires a high level of security and trust.
+                        </SectionDesc>
+                    </Stack>
                     <div
                         onMouseDown={handleDragStart}
                         onMouseUp={handleDragEnd}

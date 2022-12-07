@@ -109,12 +109,13 @@ const VerifyAPI = () => {
                                 </SectionTitle>
                                 <SectionHead
                                     sx={{
-                                        width: '210px',
+                                        maxWidth: '242px',
+                                        width: '100%',
                                         color: '#fff',
                                         textAlign: 'center',
                                     }}
                                 >
-                                    Effective and convenient
+                                    Convenient and Efficient
                                 </SectionHead>
                                 <SectionHead
                                     sx={{
@@ -131,15 +132,20 @@ const VerifyAPI = () => {
                                 <SectionDesc
                                     sx={{
                                         color: '#d0d5e0',
-                                        width: '284px',
+                                        maxWidth: '342px',
+                                        width: '100%',
                                         textAlign: 'center',
-                                        pb: '30px',
+                                        pb: '50px',
                                     }}
                                 >
-                                    It supports various functions such as
-                                    contract recording & inquiry, extraction of
-                                    HASH values, and status recording, and
-                                    provides a guide for easy application.
+                                    We support a wide range of features
+                                    including the recording and searching of
+                                    contract data,
+                                    <br /> extraction of HASH values and
+                                    contract status recording.
+                                    <br /> To make your implementation process
+                                    seamless, we also provide a detailed user
+                                    guide.
                                 </SectionDesc>
 
                                 <OutlinedWhiteButton title="API Docs" />

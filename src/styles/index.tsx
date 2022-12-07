@@ -7,7 +7,11 @@ import { IKeyValue } from '../interface'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import { isBrowser } from 'react-device-detect'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import { IC_OPEN_IN_NEW_GREY } from '../constants/images'
+import {
+    IC_ARROW_RIGHT_BLUE,
+    IC_ARROW_RIGHT_WHITE,
+    IC_OPEN_IN_NEW_GREY,
+} from '../constants/images'
 
 export const Container = styled(Box)(({ theme }) => ({
     width: '100%',
@@ -64,41 +68,57 @@ export const OutlinedBlueButton = ({
     sx?: IKeyValue
     onClick?: any
     textOnly?: boolean
-}) => (
-    <Stack
-        onClick={onClick}
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        className="buttonHover"
-        sx={{
-            // box
-            width: isBrowser ? '200px' : '162px',
-            height: isBrowser ? '48px' : '42px',
-            border: '1px solid #0875f5',
-            borderRadius: '4px',
-            userSelect: 'none',
-            cursor: 'pointer',
+}) => {
+    return (
+        <Stack
+            onClick={onClick}
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            className="buttonHover"
+            sx={{
+                // box
+                width: isBrowser ? '200px' : '162px',
+                height: isBrowser ? '48px' : '42px',
+                border: '1px solid #0875f5',
+                borderRadius: '4px',
+                userSelect: 'none',
+                cursor: 'pointer',
 
-            // text
-            fontFamily: Lato,
-            fontSize: isBrowser ? '16px' : '14px',
-            fontWeight: 60255,
-            lineHeight: isBrowser ? 1.63 : 1.64,
-            letterSpacing: isBrowser ? '-0.24px' : '-0.21px',
-            color: '#0875f5',
-            // event: hover
-            ':hover': {
-                backgroundColor: '#0875f5',
-                color: '#fff',
-            },
-            ...sx,
-        }}
-    >
-        {title}
-        {!textOnly && <KeyboardArrowRightIcon />}
-    </Stack>
-)
+                // text
+                fontFamily: Lato,
+                fontSize: isBrowser ? '16px' : '14px',
+                fontWeight: 60255,
+                lineHeight: 1, //isBrowser ? 1.63 : 1.64,
+                letterSpacing: isBrowser ? '-0.24px' : '-0.21px',
+                color: '#0875f5',
+                gap: '3px',
+                // event: hover
+                ':hover': {
+                    backgroundColor: '#0875f5',
+                    color: '#fff',
+                    '> .buttonArrow': {
+                        backgroundImage: `url(${IC_ARROW_RIGHT_WHITE})`,
+                    },
+                },
+                ...sx,
+            }}
+        >
+            <span>{title}</span>
+            {!textOnly && (
+                <Box
+                    className="buttonArrow"
+                    sx={{
+                        width: '12px',
+                        height: '12px',
+                        backgroundSize: 'contain',
+                        backgroundImage: `url(${IC_ARROW_RIGHT_BLUE})`,
+                    }}
+                />
+            )}
+        </Stack>
+    )
+}
 
 export const OutlinedWhiteButton = ({
     title,
@@ -125,10 +145,10 @@ export const OutlinedWhiteButton = ({
             fontFamily: Lato,
             fontSize: isBrowser ? '16px' : '14px',
             fontWeight: 60255,
-            lineHeight: isBrowser ? 1.63 : 1.64,
+            lineHeight: 1, // isBrowser ? 1.63 : 1.64,
             letterSpacing: isBrowser ? '-0.24px' : '-0.21px',
             color: '#fff',
-
+            gap: '3px',
             // event: hover
             ':hover': {
                 borderColor: '#0875f5',
@@ -137,7 +157,16 @@ export const OutlinedWhiteButton = ({
             ...sx,
         }}
     >
-        {title} <KeyboardArrowRightIcon />
+        {title}{' '}
+        <Box
+            className="buttonArrow"
+            sx={{
+                width: '12px',
+                height: '12px',
+                backgroundSize: 'contain',
+                backgroundImage: `url(${IC_ARROW_RIGHT_WHITE})`,
+            }}
+        />
     </Stack>
 )
 

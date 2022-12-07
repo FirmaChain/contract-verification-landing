@@ -388,22 +388,13 @@ const Welcome = () => {
                             reliability.
                         </Typography>
                     </Stack>
-                    <Stack
-                        alignItems="center"
-                        sx={{
-                            position: 'relative',
-                            width: '100%',
-                            height: 'calc(100vw - 50px)',
-                        }}
-                    >
+
+                    <Stack>
                         <img
                             src={M_IMG_MAIN_VISUAL}
                             alt=""
                             style={{
-                                maxWidth: 'calc(100% - 30px)',
-                                width: '100%',
-                                position: 'absolute',
-                                top: '-2px',
+                                margin: '46px',
                             }}
                         />
                     </Stack>

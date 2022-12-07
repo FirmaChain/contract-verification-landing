@@ -30,7 +30,11 @@ const Select = ({
     }
 
     return (
-        <Stack sx={{ width: 'calc(100%)', position: 'relative', zIndex: 5 }}>
+        <Stack
+            tabIndex={1}
+            onBlur={() => setOpen(false)}
+            sx={{ width: 'calc(100%)', position: 'relative', zIndex: 5 }}
+        >
             <Stack
                 onClick={() => setOpen(!open)}
                 direction="row"
@@ -77,7 +81,7 @@ const Select = ({
             >
                 <Stack
                     sx={{
-                        height: '240px',
+                        height: `${LIST.length * 48 + 8}px`,
 
                         border: '1px solid #546079',
                         backgroundColor: '#333b4c',

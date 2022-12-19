@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-import GlobalStateContext from '../contexts/GlobalStateContext'
+import { useContext } from "react";
+import GlobalStateContext from "../contexts/GlobalStateContext";
 
 const useGlobalState = () => {
-    const context = useContext(GlobalStateContext)
+    const context = useContext(GlobalStateContext);
 
-    if (!context) throw new Error('global context not exist')
+    if (!context) throw new Error("global context not exist");
 
-    return context
-}
+    return context;
+};
 
-export default useGlobalState
+export default useGlobalState;

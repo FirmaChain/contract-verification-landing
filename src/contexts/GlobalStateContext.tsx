@@ -1,21 +1,17 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from "react";
 
 export type GlobalStateContextType = {
-    headerState: any
-    setHeaderState: any
-    mobileHeaderOpen: any
-    setMobileHeaderOpen: any
-}
+    headerState: any;
+    setHeaderState: any;
+    mobileHeaderOpen: any;
+    setMobileHeaderOpen: any;
+};
 
-const GlobalStateContext = createContext<GlobalStateContextType | null>(null)
+const GlobalStateContext = createContext<GlobalStateContextType | null>(null);
 
-export const GlobalStateProvider = ({
-    children,
-}: {
-    children: React.ReactNode
-}) => {
-    const [headerState, setHeaderState] = useState(0)
-    const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false)
+export const GlobalStateProvider = ({ children }: { children: React.ReactNode }) => {
+    const [headerState, setHeaderState] = useState(0);
+    const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false);
 
     return (
         <GlobalStateContext.Provider
@@ -28,7 +24,7 @@ export const GlobalStateProvider = ({
         >
             {children}
         </GlobalStateContext.Provider>
-    )
-}
+    );
+};
 
-export default GlobalStateContext
+export default GlobalStateContext;

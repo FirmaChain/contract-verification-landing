@@ -15,6 +15,7 @@ const Mobile = () => {
         <MobileView style={{ width: "100%" }}>
             <Stack direction="column" gap="20px" alignItems="center" sx={{ boxSizing: "border-box", p: "0 30px" }}>
                 <Typography
+                    variant="h1"
                     sx={{
                         fontFamily: Metropolis,
                         fontSize: "37px",

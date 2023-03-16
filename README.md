@@ -6,5 +6,3 @@
 Based on FirmaChain’s high credibility, FIRMA VERIFY authenticates all recorded data on FIRMACHAIN.
 
 We support a wide range of features including the recording and searching of contract data, extraction of HASH values and contract status recording.
-
-# How to bulid Contract Verification Tool

@@ -30,6 +30,7 @@ const Desktop = () => {
                 >
                     <Stack justifyContent="center" gap="40px" sx={{ maxWidth: "1200px" }}>
                         <Typography
+                            variant="h1"
                             sx={{
                                 maxWidth: "464px",
                                 width: "100%",
